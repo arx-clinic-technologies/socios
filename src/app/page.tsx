@@ -1,11 +1,11 @@
-import { DayView } from "@/components/day-view";
 import { SiteFooter } from "@/components/site-footer";
-import { getLatestDay, getNeighbours } from "@/lib/updates";
+import { WeekView } from "@/components/week-view";
+import { getLatestWeek, getNeighbours } from "@/lib/updates";
 
 export default function HomePage() {
-  const day = getLatestDay();
+  const week = getLatestWeek();
 
-  if (!day) {
+  if (!week) {
     return (
       <main className="px-6 py-20 text-center">
         <p className="text-kd-muted">Todavía no hay entregas publicadas.</p>
@@ -13,11 +13,11 @@ export default function HomePage() {
     );
   }
 
-  const { older, newer } = getNeighbours(day.date);
+  const { older, newer } = getNeighbours(week.start);
 
   return (
     <main>
-      <DayView day={day} older={older} newer={newer} isLatest />
+      <WeekView week={week} older={older} newer={newer} isLatest />
       <SiteFooter />
     </main>
   );

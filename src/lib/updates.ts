@@ -21,23 +21,29 @@ export interface Stat {
   text: string;
 }
 
-export interface Day {
-  date: string;
+/** Una entrega semanal: las entregas de Kindoc se publican cada semana. */
+export interface Week {
+  /** Lunes de la semana, en formato YYYY-MM-DD. Es la llave de la entrega. */
+  start: string;
+  /** Domingo de la semana. */
+  end: string;
   label: string;
   title: string;
   sections: Section[];
   changes: number;
   internal: number;
   products: string[];
+  /** Días de esa semana en que efectivamente se subió algo. */
+  dates: string[];
   stat?: Stat;
   note?: string;
 }
 
 export interface Bitacora {
-  days: Day[];
+  weeks: Week[];
   sinceNote: string;
   totals: {
-    days: number;
+    weeks: number;
     changes: number;
     since: string | null;
     sinceLabel: string | null;
@@ -50,26 +56,26 @@ export function getBitacora(): Bitacora {
   return bitacora;
 }
 
-/** Los días vienen del generador ordenados del más reciente al más antiguo. */
-export function getDays(): Day[] {
-  return bitacora.days;
+/** Las semanas vienen del generador de la más reciente a la más antigua. */
+export function getWeeks(): Week[] {
+  return bitacora.weeks;
 }
 
-export function getLatestDay(): Day | undefined {
-  return bitacora.days[0];
+export function getLatestWeek(): Week | undefined {
+  return bitacora.weeks[0];
 }
 
-export function getDay(date: string): Day | undefined {
-  return bitacora.days.find((day) => day.date === date);
+export function getWeek(start: string): Week | undefined {
+  return bitacora.weeks.find((week) => week.start === start);
 }
 
-/** Día anterior y siguiente en la bitácora, para navegar sin volver al índice. */
-export function getNeighbours(date: string): { older?: Day; newer?: Day } {
-  const index = bitacora.days.findIndex((day) => day.date === date);
+/** Entrega anterior y siguiente, para navegar sin volver al índice. */
+export function getNeighbours(start: string): { older?: Week; newer?: Week } {
+  const index = bitacora.weeks.findIndex((week) => week.start === start);
   if (index === -1) return {};
   return {
-    newer: index > 0 ? bitacora.days[index - 1] : undefined,
-    older: bitacora.days[index + 1],
+    newer: index > 0 ? bitacora.weeks[index - 1] : undefined,
+    older: bitacora.weeks[index + 1],
   };
 }
 
@@ -84,8 +90,11 @@ export function monthOf(date: string): string {
   return `${MONTHS[Number(month) - 1]} ${year}`;
 }
 
-/** "2026-08-01" -> "1 ago", para las etiquetas compactas de la línea de tiempo. */
-export function shortLabel(date: string): string {
-  const [, month, day] = date.split("-");
-  return `${Number(day)} ${MONTHS[Number(month) - 1].slice(0, 3)}`;
+/** "2026-07-27" + "2026-08-02" -> "27 jul – 2 ago", para la navegación. */
+export function shortRange(start: string, end: string): string {
+  const [, startMonth, startDay] = start.split("-");
+  const [, endMonth, endDay] = end.split("-");
+  const from = `${Number(startDay)} ${MONTHS[Number(startMonth) - 1].slice(0, 3)}`;
+  const to = `${Number(endDay)} ${MONTHS[Number(endMonth) - 1].slice(0, 3)}`;
+  return `${from} – ${to}`;
 }

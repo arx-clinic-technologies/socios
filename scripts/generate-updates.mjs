@@ -357,22 +357,56 @@ function curatedDetails(override) {
   return Array.isArray(override.details) ? override.details.slice(0, 3) : [];
 }
 
+const MONTH_NAMES = [
+  "enero", "febrero", "marzo", "abril", "mayo", "junio",
+  "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre",
+];
+
+function parts(date) {
+  const [year, month, day] = date.split("-").map(Number);
+  return { year, month, day };
+}
+
+function shiftDays(date, amount) {
+  const value = new Date(`${date}T12:00:00Z`);
+  value.setUTCDate(value.getUTCDate() + amount);
+  return value.toISOString().slice(0, 10);
+}
+
+/**
+ * Lunes de la semana a la que pertenece una fecha. Las entregas son semanales,
+ * así que la unidad de la bitácora es la semana ISO (lunes a domingo) y no el
+ * día suelto en que se subió cada cosa.
+ */
+function weekStart(date) {
+  const weekday = new Date(`${date}T12:00:00Z`).getUTCDay(); // 0 = domingo
+  return shiftDays(date, weekday === 0 ? -6 : 1 - weekday);
+}
+
+/** "27 de julio – 2 de agosto, 2026", colapsando lo que se repite. */
+function formatRange(from, to) {
+  const a = parts(from);
+  const b = parts(to);
+
+  if (a.year !== b.year) {
+    return `${a.day} de ${MONTH_NAMES[a.month - 1]} de ${a.year} – ${b.day} de ${MONTH_NAMES[b.month - 1]}, ${b.year}`;
+  }
+  if (a.month !== b.month) {
+    return `${a.day} de ${MONTH_NAMES[a.month - 1]} – ${b.day} de ${MONTH_NAMES[b.month - 1]}, ${b.year}`;
+  }
+  return `${a.day} – ${b.day} de ${MONTH_NAMES[a.month - 1]}, ${b.year}`;
+}
+
 function formatLabel(date) {
-  const formatted = new Intl.DateTimeFormat("es-MX", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-    timeZone: "UTC",
-  }).format(new Date(`${date}T12:00:00Z`));
-  // "1 de agosto de 2026" -> "1 de agosto, 2026"
-  return formatted.replace(/ de (\d{4})$/, ", $1");
+  const { year, month, day } = parts(date);
+  return `${day} de ${MONTH_NAMES[month - 1]}, ${year}`;
 }
 
 function loadOverrides() {
-  if (!existsSync(OVERRIDES)) return { days: {}, commits: {}, since: null, sinceNote: "" };
+  if (!existsSync(OVERRIDES)) return { weeks: {}, commits: {}, since: null, sinceNote: "" };
   const parsed = JSON.parse(readFileSync(OVERRIDES, "utf8"));
   return {
-    days: parsed.days || {},
+    weeks: parsed.weeks || {},
     commits: parsed.commits || {},
     since: parsed.since || null,
     sinceNote: parsed.sinceNote || "",
@@ -392,8 +426,8 @@ function build() {
     commits.push(...found);
   }
 
-  /** @type {Map<string, {items: Map<string, any>, internal: number, products: Set<string>}>} */
-  const byDate = new Map();
+  /** @type {Map<string, {items: Map<string, any>, internal: number, products: Set<string>, dates: Set<string>}>} */
+  const byWeek = new Map();
 
   for (const commit of commits) {
     const override = overrides.commits[commit.hash] || {};
@@ -402,17 +436,24 @@ function build() {
     if (ALWAYS_HIDE.some((pattern) => pattern.test(commit.subject))) continue;
 
     const { type, scope, text } = parseConventional(commit.subject);
+    const start = weekStart(commit.date);
 
-    if (!byDate.has(commit.date)) {
-      byDate.set(commit.date, { items: new Map(), internal: 0, products: new Set() });
+    if (!byWeek.has(start)) {
+      byWeek.set(start, {
+        items: new Map(),
+        internal: 0,
+        products: new Set(),
+        dates: new Set(),
+      });
     }
-    const day = byDate.get(commit.date);
-    day.products.add(commit.product);
+    const week = byWeek.get(start);
+    week.products.add(commit.product);
+    week.dates.add(commit.date);
 
     // El trabajo interno se resume en un contador, no se enumera.
     const isInternal = INTERNAL_TYPES.has(type) || INTERNAL_SCOPES.has(scope.toLowerCase());
     if (isInternal && !override.text) {
-      day.internal += 1;
+      week.internal += 1;
       continue;
     }
 
@@ -421,8 +462,8 @@ function build() {
       (override.area && AREAS.find((a) => a.id === override.area)) ||
       resolveArea(scope, text, commit.body);
 
-    if (!day.items.has(area.id)) {
-      day.items.set(area.id, { emoji: area.emoji, title: area.title, items: [] });
+    if (!week.items.has(area.id)) {
+      week.items.set(area.id, { emoji: area.emoji, title: area.title, items: [] });
     }
 
     const headline = override.text || toProductLanguage(text);
@@ -430,7 +471,7 @@ function build() {
       needsReview.push({ hash: commit.hash, date: commit.date, headline });
     }
 
-    day.items.get(area.id).items.push({
+    week.items.get(area.id).items.push({
       hash: commit.hash,
       kind,
       text: headline,
@@ -439,37 +480,44 @@ function build() {
     });
   }
 
-  const days = [...byDate.entries()]
+  const weeks = [...byWeek.entries()]
     .sort((a, b) => (a[0] < b[0] ? 1 : -1))
-    .map(([date, day]) => {
-      const dayOverride = overrides.days[date] || {};
-      const sections = dayOverride.sections
-        ? dayOverride.sections
-        : [...day.items.values()].filter((section) => section.items.length > 0);
+    .map(([start, week]) => {
+      const weekOverride = overrides.weeks[start] || {};
+      const end = shiftDays(start, 6);
+      const sections = weekOverride.sections
+        ? weekOverride.sections
+        : [...week.items.values()].filter((section) => section.items.length > 0);
       const changes = sections.reduce((total, section) => total + section.items.length, 0);
 
       return {
-        date,
-        label: formatLabel(date),
-        title: dayOverride.title || "Lo que hicimos",
+        start,
+        end,
+        label: formatRange(start, end),
+        title: weekOverride.title || "Lo que hicimos",
         sections,
         changes,
-        internal: day.internal,
-        products: [...day.products],
-        ...(dayOverride.stat ? { stat: dayOverride.stat } : {}),
-        ...(dayOverride.note ? { note: dayOverride.note } : {}),
+        internal: week.internal,
+        products: [...week.products],
+        // Días de la semana en que efectivamente se subió algo, del más viejo al
+        // más reciente: sirve para decir "se publicó en 3 días distintos".
+        dates: [...week.dates].sort(),
+        ...(weekOverride.stat ? { stat: weekOverride.stat } : {}),
+        ...(weekOverride.note ? { note: weekOverride.note } : {}),
       };
     })
-    .filter((day) => day.sections.length > 0);
+    .filter((week) => week.sections.length > 0);
+
+  const oldest = weeks[weeks.length - 1];
 
   return {
-    days,
+    weeks,
     sinceNote: overrides.sinceNote || "",
     totals: {
-      days: days.length,
-      changes: days.reduce((total, day) => total + day.changes, 0),
-      since: days.length ? days[days.length - 1].date : null,
-      sinceLabel: days.length ? formatLabel(days[days.length - 1].date) : null,
+      weeks: weeks.length,
+      changes: weeks.reduce((total, week) => total + week.changes, 0),
+      since: oldest ? oldest.start : null,
+      sinceLabel: oldest ? formatLabel(oldest.dates[0]) : null,
     },
   };
 }
@@ -489,7 +537,9 @@ if (isCheck) {
   console.log("\n✓ La bitácora está al día.");
 } else {
   writeFileSync(OUTPUT, serialized);
-  console.log(`\n✓ ${data.totals.days} días · ${data.totals.changes} mejoras → src/data/updates.json`);
+  console.log(
+    `\n✓ ${data.totals.weeks} semanas · ${data.totals.changes} mejoras → src/data/updates.json`,
+  );
 
   if (needsReview.length) {
     console.log(

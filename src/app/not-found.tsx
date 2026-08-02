@@ -10,7 +10,7 @@ export default function NotFound() {
           Esa entrega no existe
         </h1>
         <p className="mt-3 text-sm leading-relaxed text-kd-gray">
-          Puede que el enlace esté mal escrito o que esa fecha no tenga entrega.
+          Puede que el enlace esté mal escrito o que esa semana no tenga entrega.
         </p>
       </header>
       <div className="flex flex-wrap gap-3 px-6 py-8 sm:px-9">

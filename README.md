@@ -3,9 +3,13 @@
 Sitio donde los socios ven, en lenguaje de producto y sin tecnicismos, cada
 entrega que se sube a Kindoc. Se publica en Vercel.
 
-- **Portada** (`/`): la última entrega, con el resumen del día.
-- **Entrega** (`/d/2026-08-01`): cualquier día anterior, navegable hacia atrás y
-  hacia adelante.
+**Las entregas son semanales.** La unidad de la bitácora es la semana, no el día
+suelto en que se subió cada cosa: todo lo que se trabajó de lunes a domingo se
+agrupa en una sola entrega.
+
+- **Portada** (`/`): la última entrega semanal.
+- **Entrega** (`/s/2026-07-27`): cualquier semana anterior, navegable hacia atrás
+  y hacia adelante. La URL lleva el **lunes** de esa semana.
 - **Historial** (`/historial`): todas las entregas agrupadas por mes.
 
 El acceso es **privado por URL**: quien tenga el enlace entra, pero el sitio pide
@@ -24,13 +28,14 @@ npm run bitacora
 
 Ese comando lee el historial de git, descarta el trabajo interno (pruebas,
 formato, reorganizaciones), traduce lo que queda a lenguaje de producto, lo
-agrupa por día y por área, y escribe `src/data/updates.json`.
+agrupa **por semana** y por área, y escribe `src/data/updates.json`.
 
 **Ese JSON se commitea.** Vercel no tiene acceso a los otros repos, así que el
-sitio se construye únicamente con el archivo ya generado. El flujo es:
+sitio se construye únicamente con el archivo ya generado. El flujo de cada
+semana es:
 
 1. Trabajas y commiteas normal en `Back` / `Dashboard` / `agente-arx`.
-2. Aquí corres `npm run bitacora`.
+2. Al cerrar la semana, aquí corres `npm run bitacora`.
 3. Revisas lo que salió y pules lo que haga falta (ver abajo).
 4. Commiteas y haces push: Vercel republica solo.
 
@@ -61,19 +66,24 @@ sonando técnicos y hay que reescribir a mano en `content/overrides.json`:
 - `details` — sub-puntos. **Solo salen de aquí**: el cuerpo del commit son notas
   internas con nombres de archivo y banderas, no sirve publicarlo tal cual.
 
-También se puede personalizar un día completo:
+También se puede personalizar una entrega completa. La llave es el **lunes** de
+esa semana, aunque el trabajo se haya subido el jueves:
 
 ```json
 {
-  "days": {
-    "2026-08-01": {
-      "title": "Lo que hicimos hoy",
+  "weeks": {
+    "2026-07-27": {
+      "title": "Lo que hicimos esta semana",
       "stat": { "value": "0", "text": "**Cero interrupciones.** …" },
       "note": "Nota al pie de esa entrega."
     }
   }
 }
 ```
+
+El `stat` es ese bloque oscuro con un número grande: úsalo para el dato que
+resuma la semana (cero caídas, cuántas citas se agendaron solas, etc.). Si no lo
+defines, la entrega simplemente no lo muestra.
 
 `since` marca desde qué fecha arranca la bitácora, y `sinceNote` explica por qué
 en el pie del sitio.
