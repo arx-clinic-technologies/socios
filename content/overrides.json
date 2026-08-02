@@ -1,0 +1,554 @@
+{
+  "_leeme": "Aquí se reescribe a lenguaje de socio lo que el generador saca de los commits. Todo lo de este archivo gana sobre lo automático. Para ocultar algo: \"hide\": true. Para reescribirlo: \"text\". Para moverlo de sección: \"area\". Para marcarlo como arreglo: \"kind\": \"arreglo\".",
+
+  "since": "2026-05-24",
+  "sinceNote": "La bitácora arranca el 24 de mayo de 2026. Antes de esa fecha el historial no tiene el detalle necesario para resumirlo con precisión, así que preferimos no inventarlo.",
+
+  "days": {
+    "2026-08-01": {
+      "title": "Lo que hicimos hoy",
+      "stat": {
+        "value": "0",
+        "text": "**Cero interrupciones.** El asistente, el panel y las citas siguieron trabajando sin una sola caída mientras publicábamos todo esto."
+      },
+      "note": "Los cambios de agenda y recordatorios ya están en producción. La conexión con Google Calendar queda lista y a la espera de la configuración final de la cuenta de Google de la clínica."
+    }
+  },
+
+  "commits": {
+    "428604a": {
+      "area": "citas",
+      "text": "Una cita se puede mover de un médico a otro **arrastrándola** en la agenda, y el sistema verifica que quien la mueve tenga permiso para hacerlo"
+    },
+    "99d16a8": {
+      "area": "citas",
+      "text": "Nueva **vista del día por médico**: una columna por doctor para ver de un vistazo cómo va la jornada completa del consultorio",
+      "details": [
+        "Se elige qué médicos ver y en qué orden; la página lo recuerda para la próxima vez",
+        "Cada médico tiene su color para distinguir las citas de un golpe de vista"
+      ]
+    },
+    "7831f8c": {
+      "area": "agenda-google",
+      "text": "La **agenda de Google se sincroniza sola** para todos los médicos de la clínica, sin que cada uno tenga que dar permiso por su cuenta"
+    },
+    "e57efdf": {
+      "area": "agenda-google",
+      "text": "Desde Configuración, un administrador **asigna el correo de cada médico** y su agenda queda conectada al momento"
+    },
+    "f99ca2a": {
+      "area": "recordatorios",
+      "text": "Si el paciente **ya confirmó**, el recordatorio de 2 horas antes llega solo como aviso y no vuelve a pedirle que confirme",
+      "details": [
+        "Los mensajes largos ya no se cortan a media palabra",
+        "En el panel se ve qué botón apretó el paciente, en lugar de un código interno"
+      ]
+    },
+    "86194a3": {
+      "area": "monitoreo",
+      "text": "Nuevo **tablero interno** para ver en vivo las conversaciones del asistente, cuánto tarda y si algo se está atorando"
+    },
+
+    "1a79d17": {
+      "area": "whatsapp",
+      "text": "Si un paciente **vuelve a escribir después de horas** de silencio, el asistente lo saluda de nuevo en vez de seguir una conversación vieja"
+    },
+    "c8ffe81": {
+      "area": "recordatorios",
+      "text": "Si falla la confirmación desde un botón del recordatorio, el asistente **responde igual** en lugar de quedarse callado"
+    },
+    "d41689d": {
+      "area": "recordatorios",
+      "text": "Los botones de confirmación funcionan aunque el paciente mande **varios mensajes seguidos**"
+    },
+    "2c624af": { "hide": true },
+    "a9bfdfe": {
+      "area": "whatsapp",
+      "text": "Los mensajes del asistente salen con **emojis** en fechas, horarios y ubicación para que se lean más fácil"
+    },
+
+    "170c5a8": {
+      "area": "recordatorios",
+      "text": "Las respuestas a un recordatorio se atienden **al instante**, sin esperar a la inteligencia artificial"
+    },
+    "a9b1fb2": { "hide": true },
+    "349f998": {
+      "area": "recordatorios",
+      "text": "Las confirmaciones por recordatorio se procesan siempre igual y con la **hora correcta** de cada sede"
+    },
+    "ccb753c": {
+      "area": "recordatorios",
+      "kind": "arreglo",
+      "text": "El botón de confirmar ya funciona bien cuando un paciente pertenece a **más de una clínica**"
+    },
+    "21d838a": {
+      "area": "citas",
+      "text": "Cada clínica define si acepta **citas para el mismo día** y qué responde el asistente cuando se lo piden"
+    },
+    "e9cde46": {
+      "area": "citas",
+      "text": "Ese permiso de citas el mismo día se **activa o desactiva desde Configuración**, sin pedirle nada al equipo técnico"
+    },
+    "259c71e": {
+      "area": "citas",
+      "text": "Si la clínica no acepta citas el mismo día, el asistente lo explica y **pasa la conversación a una persona**"
+    },
+    "767acb6": {
+      "area": "citas",
+      "text": "Si el paciente pide una **fecha que ya pasó**, el asistente lo nota y le ofrece las siguientes disponibles"
+    },
+    "7c6f492": {
+      "area": "whatsapp",
+      "text": "El asistente **agrupa lo que envía** para no llegarle al paciente en ráfaga de mensajes"
+    },
+    "22daa6b": {
+      "area": "pacientes",
+      "text": "En el detalle del paciente ahora se ve si es **paciente nuevo** y su fecha de nacimiento",
+      "details": [
+        "Se marca como nuevo a quien no tiene consultas ni visitas previas",
+        "Junto a la edad se muestra la fecha de nacimiento completa"
+      ]
+    },
+    "a5f05b2": {
+      "area": "pacientes",
+      "kind": "arreglo",
+      "text": "Corregimos cómo se mostraba la fecha de nacimiento junto a la edad"
+    },
+    "b6e0ed0": {
+      "area": "whatsapp",
+      "kind": "arreglo",
+      "text": "Arreglamos un error que impedía registrar algunos mensajes de WhatsApp muy largos"
+    },
+
+    "0002412": {
+      "area": "seguridad",
+      "text": "Solo el personal de la clínica correspondiente puede **dar de alta pacientes**"
+    },
+    "383752d": {
+      "area": "seguridad",
+      "text": "Nuevo flujo para **recuperar la contraseña**, con correos que llegan de forma confiable"
+    },
+    "d2b11f3": {
+      "area": "seguridad",
+      "text": "Pantalla de recuperación de contraseña y páginas de aviso legal en el panel"
+    },
+    "1dc5245": {
+      "area": "medicos",
+      "text": "Rediseñamos el formulario para **dar de alta médicos**"
+    },
+    "51ad3a8": {
+      "area": "citas",
+      "text": "**Recepción ya puede elegir el médico** al crear una cita"
+    },
+
+    "0d278cd": {
+      "area": "recordatorios",
+      "text": "Al crear o cancelar una cita, sus recordatorios **se ajustan solos**"
+    },
+    "e0d3fa3": {
+      "area": "recordatorios",
+      "text": "Nuevo recordatorio automático **48 horas antes** de la cita"
+    },
+    "dd4d28e": { "hide": true },
+    "ef34d29": { "hide": true },
+    "682311d": {
+      "area": "citas",
+      "text": "Las próximas citas se pueden consultar **por clínica completa**, no solo por médico"
+    },
+    "8611bc9": {
+      "area": "seguridad",
+      "text": "El personal de asistencia ya puede **gestionar citas y recordatorios**"
+    },
+    "b4b6434": { "hide": true },
+    "85b24a2": { "hide": true },
+
+    "0354497": {
+      "area": "seguridad",
+      "text": "El personal de asistencia también puede **administrar médicos**"
+    },
+    "1d2ffde": {
+      "area": "whatsapp",
+      "text": "En el chat se puede **actualizar el resumen** de una conversación cuando haga falta, y se ve qué tan reciente es"
+    },
+    "85fde82": {
+      "area": "whatsapp",
+      "text": "El chat **sugiere respuestas** listas para enviar"
+    },
+    "e974a21": {
+      "area": "whatsapp",
+      "text": "Los resúmenes de conversación quedan guardados y **aparecen al instante**"
+    },
+    "497fd85": { "hide": true },
+
+    "2178751": {
+      "area": "whatsapp",
+      "text": "El asistente ya recibe **fotos, audios, videos y documentos** por WhatsApp"
+    },
+    "35f740a": {
+      "area": "agenda-google",
+      "text": "Primera conexión con Google Calendar: los **bloqueos de la agenda personal** del médico se ven en el calendario de la clínica"
+    },
+    "d7d3dba": { "hide": true },
+
+    "24169f8": {
+      "area": "whatsapp",
+      "text": "El paciente puede **reiniciar la conversación** con una palabra y el asistente empieza de cero"
+    },
+    "fa13639": {
+      "area": "whatsapp",
+      "text": "El asistente junta los mensajes seguidos y responde mejor las dudas sobre **costos de consulta**"
+    },
+
+    "1c3f287": {
+      "area": "medicos",
+      "text": "El asistente **filtra médicos por sede y especialidad** y revisa la disponibilidad antes de proponer un horario"
+    },
+    "d6dbd4e": {
+      "area": "citas",
+      "text": "Si no está claro para qué paciente es la cita, el asistente **pregunta en vez de adivinar**; también detecta choques de horario el mismo día"
+    },
+
+    "483adc9": {
+      "area": "citas",
+      "text": "El asistente entiende mejor **qué fecha eligió** el paciente"
+    },
+    "59c1a5a": {
+      "area": "pacientes",
+      "text": "El asistente identifica mejor al paciente y su **fecha de nacimiento**"
+    },
+    "63952c8": {
+      "area": "pacientes",
+      "text": "Si el paciente **ya está registrado**, el asistente lo reconoce y no le vuelve a pedir sus datos"
+    },
+    "765d4c4": {
+      "area": "citas",
+      "text": "Agendar, cancelar y reagendar se **confirma directo por WhatsApp**, sin pasos intermedios"
+    },
+    "79570e7": {
+      "area": "pacientes",
+      "text": "El asistente toma en cuenta al **tutor y a los menores registrados** para responder con precisión"
+    },
+    "35115a4": { "hide": true },
+    "8a22f34": { "hide": true },
+
+    "0f2c209": {
+      "area": "medicos",
+      "text": "El asistente detecta mejor cuándo le están **preguntando por una especialidad**"
+    },
+    "3a757ce": {
+      "area": "medicos",
+      "text": "Mejoramos la **recomendación de especialidad** según lo que describe el paciente"
+    },
+    "f7cf03b": {
+      "area": "medicos",
+      "text": "El asistente resuelve mejor **a qué especialidad corresponde** lo que pide el paciente"
+    },
+    "42531fd": {
+      "area": "agenda-google",
+      "text": "Arrancó la **sincronización con Google Calendar** de la agenda de cada médico"
+    },
+    "4dadf9d": {
+      "area": "monitoreo",
+      "text": "Si una respuesta del asistente no cumple la calidad esperada, **se corrige o pasa a una persona** antes de llegarle al paciente"
+    },
+    "a85098b": {
+      "area": "monitoreo",
+      "text": "Si nadie retoma una conversación que se pasó a una persona, el sistema **avisa**"
+    },
+    "b7cf4a0": {
+      "area": "citas",
+      "text": "El asistente **verifica la fecha y aclara con qué médico** antes de confirmar"
+    },
+    "ca5bbf2": {
+      "area": "citas",
+      "kind": "arreglo",
+      "text": "El asistente ya no confunde cualquier texto corto con la **ciudad del paciente**"
+    },
+    "fac3831": {
+      "area": "citas",
+      "text": "Mejor manejo de **fechas y horas** al agendar"
+    },
+
+    "00a532c": {
+      "area": "monitoreo",
+      "text": "Nueva **sala de observación** para ver en vivo lo que está haciendo el asistente"
+    },
+    "7c0ae33": {
+      "area": "monitoreo",
+      "text": "**Métricas del asistente**: cuánto tarda, qué resuelve y dónde se traba"
+    },
+    "57da08c": {
+      "area": "medicos",
+      "text": "El asistente elige mejor **la sede que le queda al paciente**"
+    },
+    "a2bdc37": {
+      "area": "pacientes",
+      "text": "El asistente identifica mejor **al menor** y la fecha que se propone para su cita"
+    },
+    "b0119bc": {
+      "area": "citas",
+      "text": "Mejor manejo de los **choques de horario** al agendar"
+    },
+
+    "0bbd842": {
+      "area": "seguridad",
+      "text": "Reforzamos la seguridad: revisión de la configuración al arrancar y **freno automático** si alguien intenta abusar del sistema"
+    },
+    "2523466": {
+      "area": "citas",
+      "kind": "arreglo",
+      "text": "Si un horario no está disponible, **se conserva el médico** que el paciente ya había elegido"
+    },
+    "696651a": {
+      "area": "monitoreo",
+      "text": "Estabilizamos el asistente para que **no se corte a media conversación**"
+    },
+    "6f5f87b": {
+      "area": "citas",
+      "text": "Mejor manejo de una **segunda cita** y de a quién corresponde"
+    },
+    "7a816f8": {
+      "area": "citas",
+      "text": "Si el paciente deja la conversación a medias, el agendado **se cierra solo** y no queda colgado"
+    },
+    "e169c15": {
+      "area": "monitoreo",
+      "text": "Un **supervisor revisa cada respuesta** del asistente antes de que salga"
+    },
+    "83c80d9": { "hide": true },
+    "a92e448": { "hide": true },
+    "b453cf1": { "hide": true },
+    "f190833": {
+      "area": "citas",
+      "kind": "arreglo",
+      "text": "Una segunda cita ya **no hereda la especialidad** de la anterior"
+    },
+
+    "117a211": {
+      "area": "recordatorios",
+      "kind": "arreglo",
+      "text": "Preguntar por disponibilidad ya no se confunde con **querer reagendar**"
+    },
+    "1b355a4": {
+      "area": "citas",
+      "text": "El asistente detecta **sede, médico, día y hora** según la clínica de la que se trate"
+    },
+    "1e5c9c0": {
+      "area": "pacientes",
+      "text": "Cuando hay duda de a qué paciente se refiere, el asistente **pregunta**"
+    },
+    "3f90437": {
+      "area": "citas",
+      "kind": "arreglo",
+      "text": "En Ciudad de México el asistente **pide la sucursal** antes de seguir"
+    },
+    "5217859": {
+      "area": "pacientes",
+      "kind": "arreglo",
+      "text": "Agendar para un **segundo hijo** ya no confunde al médico con el paciente"
+    },
+    "63e1cf4": {
+      "area": "citas",
+      "kind": "arreglo",
+      "text": "El asistente **recuerda en qué punto** del agendado va la conversación"
+    },
+    "652d00f": {
+      "area": "citas",
+      "kind": "arreglo",
+      "text": "El botón «Ajustar algo» de la confirmación final ya funciona"
+    },
+    "81dbcca": {
+      "area": "whatsapp",
+      "text": "Al agendar, el paciente elige horarios y médicos con **botones** en vez de tener que escribir"
+    },
+    "853e3fb": {
+      "area": "medicos",
+      "kind": "arreglo",
+      "text": "El asistente ya no confunde **especialidad y paciente con una ubicación** al buscar médicos"
+    },
+    "a3acac4": {
+      "area": "medicos",
+      "kind": "arreglo",
+      "text": "Escribir solo una especialidad (por ejemplo «Cardiología») ya no se toma como sucursal"
+    },
+    "b854bbf": {
+      "area": "whatsapp",
+      "kind": "arreglo",
+      "text": "Si el paciente manda **varios mensajes seguidos**, el asistente los junta y responde una sola vez"
+    },
+    "b9b2120": {
+      "area": "citas",
+      "text": "El asistente detecta **cambios de fecha** y resuelve los choques que provocan"
+    },
+    "bfc566b": {
+      "area": "citas",
+      "kind": "arreglo",
+      "text": "Se destrabó la confirmación y se limpió el listado de médicos en Ciudad de México"
+    },
+    "c096bc1": {
+      "area": "citas",
+      "kind": "arreglo",
+      "text": "El asistente pregunta **de dónde viene el paciente** antes de confirmar la cita"
+    },
+    "c789ae6": {
+      "area": "citas",
+      "kind": "arreglo",
+      "text": "Al preguntar por un médico y una sucursal, el asistente **muestra los horarios**"
+    },
+    "eab4064": {
+      "area": "citas",
+      "kind": "arreglo",
+      "text": "Si el paciente mezcla dudas con agendado, el asistente **pide la sucursal** antes de listar médicos"
+    },
+    "4f6adc2": {
+      "area": "whatsapp",
+      "text": "El asistente reconoce mejor los **mensajes de seguimiento**"
+    },
+    "301300b": { "hide": true },
+    "5b99af0": { "hide": true },
+    "9067f6d": { "hide": true },
+
+    "52d73af": {
+      "area": "citas",
+      "text": "Mejor manejo de errores al agendar: si algo falla, el paciente **recibe una respuesta** en vez de silencio"
+    },
+    "4cb4519": { "hide": true },
+    "6e1359f": { "hide": true },
+    "7ac9e2a": { "hide": true },
+    "e82a148": { "hide": true },
+
+    "1325b9a": {
+      "area": "citas",
+      "text": "Mejoramos el flujo de agendado y **cómo se detecta la ubicación** del paciente"
+    },
+    "1ee7299": {
+      "area": "monitoreo",
+      "text": "Mejoramos el **pase de conversaciones a una persona**"
+    },
+    "c424721": {
+      "area": "medicos",
+      "text": "El asistente ubica mejor las **sucursales de Ciudad de México**"
+    },
+    "cedc46e": {
+      "area": "citas",
+      "text": "Mejoramos la **confirmación de citas**"
+    },
+    "e725771": {
+      "area": "whatsapp",
+      "text": "Si la conversación se queda quieta, el asistente manda un **mensaje de bienvenida** para retomarla"
+    },
+
+    "1b61d2a": {
+      "area": "citas",
+      "text": "Nueva **barra de herramientas** en la agenda y aviso de «el asistente está escribiendo» en el chat"
+    },
+    "733cef8": {
+      "area": "monitoreo",
+      "text": "**Avisos en tiempo real** cuando una conversación necesita que alguien la revise"
+    },
+    "9b47779": {
+      "area": "whatsapp",
+      "text": "Mejores respuestas del asistente de recepción"
+    },
+    "9d001b9": {
+      "area": "seguridad",
+      "kind": "arreglo",
+      "text": "Corregimos **qué ve cada rol** dentro del panel"
+    },
+    "b196a44": {
+      "area": "citas",
+      "text": "El asistente responde con **la cita más próxima disponible**"
+    },
+    "d6d02f2": {
+      "area": "whatsapp",
+      "text": "Rehicimos el chat del panel para que **cargue más rápido**"
+    },
+    "f230894": {
+      "area": "whatsapp",
+      "text": "El panel recibe y muestra las **fotos y audios** que mandan los pacientes"
+    },
+    "fb0264d": { "hide": true },
+    "5ee9289": { "hide": true },
+
+    "074aa9d": {
+      "area": "faq",
+      "text": "Cargamos las **preguntas frecuentes de Kinsmile**"
+    },
+    "9acb02c": {
+      "area": "medicos",
+      "text": "El asistente responde mejor **qué especialidades cubre cada sede**"
+    },
+    "5115366": {
+      "area": "faq",
+      "kind": "arreglo",
+      "text": "El asistente responde dudas **sin perder el hilo** del agendado"
+    },
+    "06e8057": {
+      "area": "faq",
+      "kind": "arreglo",
+      "text": "Preguntas frecuentes de **estacionamiento por sede** y de dentistas"
+    },
+    "fed9e28": { "hide": true },
+
+    "5ef07b9": {
+      "area": "citas",
+      "kind": "arreglo",
+      "text": "Corregimos **la hora** que aparecía en el resumen de la cita y en la confirmación al tutor"
+    },
+    "962407f": {
+      "area": "citas",
+      "kind": "arreglo",
+      "text": "El asistente entiende **«mañana»** y otras fechas relativas"
+    },
+    "dc28c4c": {
+      "area": "pacientes",
+      "kind": "arreglo",
+      "text": "Corregimos la selección del paciente cuando **escribe el tutor**"
+    },
+    "d6ec0b2": { "hide": true },
+
+    "1da5101": {
+      "area": "whatsapp",
+      "text": "Simplificamos la **configuración de WhatsApp** en el panel"
+    },
+    "448b835": {
+      "area": "whatsapp",
+      "text": "El sistema procesa **varios mensajes de WhatsApp a la vez** sin atorarse"
+    },
+    "56cb00d": {
+      "area": "citas",
+      "text": "Si la clínica tiene **una sola sede**, el asistente ya no la pregunta"
+    },
+    "9e5a164": { "hide": true },
+    "b54fe46": { "hide": true },
+    "e72c403": { "hide": true },
+
+    "64948e8": {
+      "area": "organizacion",
+      "text": "Nuevos **roles por organización** para el equipo de cada clínica"
+    },
+    "dba3cc9": {
+      "area": "seguridad",
+      "text": "Protegimos las pantallas de administración para que **solo entre quien debe**"
+    },
+    "db53138": { "hide": true },
+    "1ccab3f": { "hide": true },
+    "a8a6c7b": { "hide": true },
+    "334e94e": { "hide": true },
+    "6510ffc": { "hide": true },
+    "c1f4903": { "hide": true },
+    "b23f660": { "hide": true },
+    "8388967": { "hide": true },
+    "de8c17c": { "hide": true },
+    "e22a212": { "hide": true },
+    "f8d0baf": { "hide": true },
+    "bbc881c": { "hide": true },
+    "9c57fff": { "hide": true },
+
+    "0e87320": {
+      "area": "whatsapp",
+      "text": "Migramos toda la mensajería de WhatsApp a **Kapso**, la base sobre la que corre hoy el asistente"
+    },
+    "c6dd55e": { "hide": true }
+  }
+}

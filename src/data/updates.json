@@ -1,0 +1,1473 @@
+{
+  "days": [
+    {
+      "date": "2026-08-01",
+      "label": "1 de agosto, 2026",
+      "title": "Lo que hicimos hoy",
+      "sections": [
+        {
+          "emoji": "🗓️",
+          "title": "Citas y agenda",
+          "items": [
+            {
+              "hash": "428604a",
+              "kind": "nuevo",
+              "text": "Una cita se puede mover de un médico a otro **arrastrándola** en la agenda, y el sistema verifica que quien la mueve tenga permiso para hacerlo",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "99d16a8",
+              "kind": "nuevo",
+              "text": "Nueva **vista del día por médico**: una columna por doctor para ver de un vistazo cómo va la jornada completa del consultorio",
+              "details": [
+                "Se elige qué médicos ver y en qué orden; la página lo recuerda para la próxima vez",
+                "Cada médico tiene su color para distinguir las citas de un golpe de vista"
+              ],
+              "product": "Panel web"
+            }
+          ]
+        },
+        {
+          "emoji": "🔔",
+          "title": "Recordatorios a pacientes",
+          "items": [
+            {
+              "hash": "f99ca2a",
+              "kind": "nuevo",
+              "text": "Si el paciente **ya confirmó**, el recordatorio de 2 horas antes llega solo como aviso y no vuelve a pedirle que confirme",
+              "details": [
+                "Los mensajes largos ya no se cortan a media palabra",
+                "En el panel se ve qué botón apretó el paciente, en lugar de un código interno"
+              ],
+              "product": "Sistema"
+            }
+          ]
+        },
+        {
+          "emoji": "📅",
+          "title": "Agenda de Google",
+          "items": [
+            {
+              "hash": "7831f8c",
+              "kind": "nuevo",
+              "text": "La **agenda de Google se sincroniza sola** para todos los médicos de la clínica, sin que cada uno tenga que dar permiso por su cuenta",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "e57efdf",
+              "kind": "nuevo",
+              "text": "Desde Configuración, un administrador **asigna el correo de cada médico** y su agenda queda conectada al momento",
+              "details": [],
+              "product": "Panel web"
+            }
+          ]
+        },
+        {
+          "emoji": "📈",
+          "title": "Monitoreo y estabilidad",
+          "items": [
+            {
+              "hash": "86194a3",
+              "kind": "nuevo",
+              "text": "Nuevo **tablero interno** para ver en vivo las conversaciones del asistente, cuánto tarda y si algo se está atorando",
+              "details": [],
+              "product": "Monitoreo"
+            }
+          ]
+        }
+      ],
+      "changes": 6,
+      "internal": 0,
+      "products": [
+        "Sistema",
+        "Panel web",
+        "Monitoreo"
+      ],
+      "stat": {
+        "value": "0",
+        "text": "**Cero interrupciones.** El asistente, el panel y las citas siguieron trabajando sin una sola caída mientras publicábamos todo esto."
+      },
+      "note": "Los cambios de agenda y recordatorios ya están en producción. La conexión con Google Calendar queda lista y a la espera de la configuración final de la cuenta de Google de la clínica."
+    },
+    {
+      "date": "2026-07-03",
+      "label": "3 de julio, 2026",
+      "title": "Lo que hicimos",
+      "sections": [
+        {
+          "emoji": "💬",
+          "title": "WhatsApp y el asistente",
+          "items": [
+            {
+              "hash": "1a79d17",
+              "kind": "nuevo",
+              "text": "Si un paciente **vuelve a escribir después de horas** de silencio, el asistente lo saluda de nuevo en vez de seguir una conversación vieja",
+              "details": [],
+              "product": "Asistente de WhatsApp"
+            }
+          ]
+        }
+      ],
+      "changes": 1,
+      "internal": 0,
+      "products": [
+        "Asistente de WhatsApp"
+      ]
+    },
+    {
+      "date": "2026-07-02",
+      "label": "2 de julio, 2026",
+      "title": "Lo que hicimos",
+      "sections": [
+        {
+          "emoji": "🔔",
+          "title": "Recordatorios a pacientes",
+          "items": [
+            {
+              "hash": "d41689d",
+              "kind": "nuevo",
+              "text": "Los botones de confirmación funcionan aunque el paciente mande **varios mensajes seguidos**",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "c8ffe81",
+              "kind": "nuevo",
+              "text": "Si falla la confirmación desde un botón del recordatorio, el asistente **responde igual** en lugar de quedarse callado",
+              "details": [],
+              "product": "Asistente de WhatsApp"
+            }
+          ]
+        }
+      ],
+      "changes": 2,
+      "internal": 0,
+      "products": [
+        "Sistema",
+        "Asistente de WhatsApp"
+      ]
+    },
+    {
+      "date": "2026-07-01",
+      "label": "1 de julio, 2026",
+      "title": "Lo que hicimos",
+      "sections": [
+        {
+          "emoji": "💬",
+          "title": "WhatsApp y el asistente",
+          "items": [
+            {
+              "hash": "a9bfdfe",
+              "kind": "nuevo",
+              "text": "Los mensajes del asistente salen con **emojis** en fechas, horarios y ubicación para que se lean más fácil",
+              "details": [],
+              "product": "Asistente de WhatsApp"
+            }
+          ]
+        }
+      ],
+      "changes": 1,
+      "internal": 0,
+      "products": [
+        "Asistente de WhatsApp"
+      ]
+    },
+    {
+      "date": "2026-06-30",
+      "label": "30 de junio, 2026",
+      "title": "Lo que hicimos",
+      "sections": [
+        {
+          "emoji": "🗓️",
+          "title": "Citas y agenda",
+          "items": [
+            {
+              "hash": "21d838a",
+              "kind": "nuevo",
+              "text": "Cada clínica define si acepta **citas para el mismo día** y qué responde el asistente cuando se lo piden",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "e9cde46",
+              "kind": "nuevo",
+              "text": "Ese permiso de citas el mismo día se **activa o desactiva desde Configuración**, sin pedirle nada al equipo técnico",
+              "details": [],
+              "product": "Panel web"
+            },
+            {
+              "hash": "259c71e",
+              "kind": "nuevo",
+              "text": "Si la clínica no acepta citas el mismo día, el asistente lo explica y **pasa la conversación a una persona**",
+              "details": [],
+              "product": "Asistente de WhatsApp"
+            },
+            {
+              "hash": "767acb6",
+              "kind": "nuevo",
+              "text": "Si el paciente pide una **fecha que ya pasó**, el asistente lo nota y le ofrece las siguientes disponibles",
+              "details": [],
+              "product": "Asistente de WhatsApp"
+            }
+          ]
+        },
+        {
+          "emoji": "💬",
+          "title": "WhatsApp y el asistente",
+          "items": [
+            {
+              "hash": "b6e0ed0",
+              "kind": "arreglo",
+              "text": "Arreglamos un error que impedía registrar algunos mensajes de WhatsApp muy largos",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "7c6f492",
+              "kind": "nuevo",
+              "text": "El asistente **agrupa lo que envía** para no llegarle al paciente en ráfaga de mensajes",
+              "details": [],
+              "product": "Asistente de WhatsApp"
+            }
+          ]
+        },
+        {
+          "emoji": "🔔",
+          "title": "Recordatorios a pacientes",
+          "items": [
+            {
+              "hash": "ccb753c",
+              "kind": "arreglo",
+              "text": "El botón de confirmar ya funciona bien cuando un paciente pertenece a **más de una clínica**",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "349f998",
+              "kind": "nuevo",
+              "text": "Las confirmaciones por recordatorio se procesan siempre igual y con la **hora correcta** de cada sede",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "170c5a8",
+              "kind": "nuevo",
+              "text": "Las respuestas a un recordatorio se atienden **al instante**, sin esperar a la inteligencia artificial",
+              "details": [],
+              "product": "Asistente de WhatsApp"
+            }
+          ]
+        },
+        {
+          "emoji": "🧸",
+          "title": "Pacientes",
+          "items": [
+            {
+              "hash": "a5f05b2",
+              "kind": "arreglo",
+              "text": "Corregimos cómo se mostraba la fecha de nacimiento junto a la edad",
+              "details": [],
+              "product": "Panel web"
+            },
+            {
+              "hash": "22daa6b",
+              "kind": "nuevo",
+              "text": "En el detalle del paciente ahora se ve si es **paciente nuevo** y su fecha de nacimiento",
+              "details": [
+                "Se marca como nuevo a quien no tiene consultas ni visitas previas",
+                "Junto a la edad se muestra la fecha de nacimiento completa"
+              ],
+              "product": "Panel web"
+            }
+          ]
+        }
+      ],
+      "changes": 11,
+      "internal": 0,
+      "products": [
+        "Sistema",
+        "Panel web",
+        "Asistente de WhatsApp"
+      ]
+    },
+    {
+      "date": "2026-06-25",
+      "label": "25 de junio, 2026",
+      "title": "Lo que hicimos",
+      "sections": [
+        {
+          "emoji": "🔒",
+          "title": "Seguridad y accesos",
+          "items": [
+            {
+              "hash": "0002412",
+              "kind": "nuevo",
+              "text": "Solo el personal de la clínica correspondiente puede **dar de alta pacientes**",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "383752d",
+              "kind": "nuevo",
+              "text": "Nuevo flujo para **recuperar la contraseña**, con correos que llegan de forma confiable",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "d2b11f3",
+              "kind": "nuevo",
+              "text": "Pantalla de recuperación de contraseña y páginas de aviso legal en el panel",
+              "details": [],
+              "product": "Panel web"
+            }
+          ]
+        },
+        {
+          "emoji": "🩺",
+          "title": "Médicos y consultorios",
+          "items": [
+            {
+              "hash": "1dc5245",
+              "kind": "nuevo",
+              "text": "Rediseñamos el formulario para **dar de alta médicos**",
+              "details": [],
+              "product": "Panel web"
+            }
+          ]
+        },
+        {
+          "emoji": "🗓️",
+          "title": "Citas y agenda",
+          "items": [
+            {
+              "hash": "51ad3a8",
+              "kind": "arreglo",
+              "text": "**Recepción ya puede elegir el médico** al crear una cita",
+              "details": [],
+              "product": "Panel web"
+            }
+          ]
+        }
+      ],
+      "changes": 5,
+      "internal": 0,
+      "products": [
+        "Sistema",
+        "Panel web"
+      ]
+    },
+    {
+      "date": "2026-06-24",
+      "label": "24 de junio, 2026",
+      "title": "Lo que hicimos",
+      "sections": [
+        {
+          "emoji": "🗓️",
+          "title": "Citas y agenda",
+          "items": [
+            {
+              "hash": "682311d",
+              "kind": "nuevo",
+              "text": "Las próximas citas se pueden consultar **por clínica completa**, no solo por médico",
+              "details": [],
+              "product": "Sistema"
+            }
+          ]
+        },
+        {
+          "emoji": "🔔",
+          "title": "Recordatorios a pacientes",
+          "items": [
+            {
+              "hash": "e0d3fa3",
+              "kind": "nuevo",
+              "text": "Nuevo recordatorio automático **48 horas antes** de la cita",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "0d278cd",
+              "kind": "nuevo",
+              "text": "Al crear o cancelar una cita, sus recordatorios **se ajustan solos**",
+              "details": [],
+              "product": "Asistente de WhatsApp"
+            }
+          ]
+        },
+        {
+          "emoji": "🔒",
+          "title": "Seguridad y accesos",
+          "items": [
+            {
+              "hash": "8611bc9",
+              "kind": "nuevo",
+              "text": "El personal de asistencia ya puede **gestionar citas y recordatorios**",
+              "details": [],
+              "product": "Panel web"
+            }
+          ]
+        }
+      ],
+      "changes": 4,
+      "internal": 2,
+      "products": [
+        "Sistema",
+        "Panel web",
+        "Asistente de WhatsApp"
+      ]
+    },
+    {
+      "date": "2026-06-23",
+      "label": "23 de junio, 2026",
+      "title": "Lo que hicimos",
+      "sections": [
+        {
+          "emoji": "🔒",
+          "title": "Seguridad y accesos",
+          "items": [
+            {
+              "hash": "0354497",
+              "kind": "nuevo",
+              "text": "El personal de asistencia también puede **administrar médicos**",
+              "details": [],
+              "product": "Sistema"
+            }
+          ]
+        },
+        {
+          "emoji": "💬",
+          "title": "WhatsApp y el asistente",
+          "items": [
+            {
+              "hash": "e974a21",
+              "kind": "nuevo",
+              "text": "Los resúmenes de conversación quedan guardados y **aparecen al instante**",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "1d2ffde",
+              "kind": "nuevo",
+              "text": "En el chat se puede **actualizar el resumen** de una conversación cuando haga falta, y se ve qué tan reciente es",
+              "details": [],
+              "product": "Panel web"
+            },
+            {
+              "hash": "85fde82",
+              "kind": "nuevo",
+              "text": "El chat **sugiere respuestas** listas para enviar",
+              "details": [],
+              "product": "Panel web"
+            }
+          ]
+        }
+      ],
+      "changes": 4,
+      "internal": 0,
+      "products": [
+        "Sistema",
+        "Panel web"
+      ]
+    },
+    {
+      "date": "2026-06-22",
+      "label": "22 de junio, 2026",
+      "title": "Lo que hicimos",
+      "sections": [
+        {
+          "emoji": "📅",
+          "title": "Agenda de Google",
+          "items": [
+            {
+              "hash": "35f740a",
+              "kind": "nuevo",
+              "text": "Primera conexión con Google Calendar: los **bloqueos de la agenda personal** del médico se ven en el calendario de la clínica",
+              "details": [],
+              "product": "Panel web"
+            }
+          ]
+        },
+        {
+          "emoji": "💬",
+          "title": "WhatsApp y el asistente",
+          "items": [
+            {
+              "hash": "2178751",
+              "kind": "nuevo",
+              "text": "El asistente ya recibe **fotos, audios, videos y documentos** por WhatsApp",
+              "details": [],
+              "product": "Asistente de WhatsApp"
+            }
+          ]
+        }
+      ],
+      "changes": 2,
+      "internal": 0,
+      "products": [
+        "Panel web",
+        "Asistente de WhatsApp"
+      ]
+    },
+    {
+      "date": "2026-06-19",
+      "label": "19 de junio, 2026",
+      "title": "Lo que hicimos",
+      "sections": [
+        {
+          "emoji": "💬",
+          "title": "WhatsApp y el asistente",
+          "items": [
+            {
+              "hash": "24169f8",
+              "kind": "nuevo",
+              "text": "El paciente puede **reiniciar la conversación** con una palabra y el asistente empieza de cero",
+              "details": [],
+              "product": "Asistente de WhatsApp"
+            },
+            {
+              "hash": "fa13639",
+              "kind": "nuevo",
+              "text": "El asistente junta los mensajes seguidos y responde mejor las dudas sobre **costos de consulta**",
+              "details": [],
+              "product": "Asistente de WhatsApp"
+            }
+          ]
+        }
+      ],
+      "changes": 2,
+      "internal": 0,
+      "products": [
+        "Asistente de WhatsApp"
+      ]
+    },
+    {
+      "date": "2026-06-18",
+      "label": "18 de junio, 2026",
+      "title": "Lo que hicimos",
+      "sections": [
+        {
+          "emoji": "🩺",
+          "title": "Médicos y consultorios",
+          "items": [
+            {
+              "hash": "1c3f287",
+              "kind": "nuevo",
+              "text": "El asistente **filtra médicos por sede y especialidad** y revisa la disponibilidad antes de proponer un horario",
+              "details": [],
+              "product": "Asistente de WhatsApp"
+            }
+          ]
+        },
+        {
+          "emoji": "🗓️",
+          "title": "Citas y agenda",
+          "items": [
+            {
+              "hash": "d6dbd4e",
+              "kind": "nuevo",
+              "text": "Si no está claro para qué paciente es la cita, el asistente **pregunta en vez de adivinar**; también detecta choques de horario el mismo día",
+              "details": [],
+              "product": "Asistente de WhatsApp"
+            }
+          ]
+        }
+      ],
+      "changes": 2,
+      "internal": 0,
+      "products": [
+        "Asistente de WhatsApp"
+      ]
+    },
+    {
+      "date": "2026-06-17",
+      "label": "17 de junio, 2026",
+      "title": "Lo que hicimos",
+      "sections": [
+        {
+          "emoji": "🧸",
+          "title": "Pacientes",
+          "items": [
+            {
+              "hash": "59c1a5a",
+              "kind": "nuevo",
+              "text": "El asistente identifica mejor al paciente y su **fecha de nacimiento**",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "79570e7",
+              "kind": "nuevo",
+              "text": "El asistente toma en cuenta al **tutor y a los menores registrados** para responder con precisión",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "63952c8",
+              "kind": "nuevo",
+              "text": "Si el paciente **ya está registrado**, el asistente lo reconoce y no le vuelve a pedir sus datos",
+              "details": [],
+              "product": "Asistente de WhatsApp"
+            }
+          ]
+        },
+        {
+          "emoji": "🗓️",
+          "title": "Citas y agenda",
+          "items": [
+            {
+              "hash": "483adc9",
+              "kind": "nuevo",
+              "text": "El asistente entiende mejor **qué fecha eligió** el paciente",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "765d4c4",
+              "kind": "nuevo",
+              "text": "Agendar, cancelar y reagendar se **confirma directo por WhatsApp**, sin pasos intermedios",
+              "details": [],
+              "product": "Asistente de WhatsApp"
+            }
+          ]
+        }
+      ],
+      "changes": 5,
+      "internal": 1,
+      "products": [
+        "Sistema",
+        "Asistente de WhatsApp"
+      ]
+    },
+    {
+      "date": "2026-06-16",
+      "label": "16 de junio, 2026",
+      "title": "Lo que hicimos",
+      "sections": [
+        {
+          "emoji": "🗓️",
+          "title": "Citas y agenda",
+          "items": [
+            {
+              "hash": "ca5bbf2",
+              "kind": "arreglo",
+              "text": "El asistente ya no confunde cualquier texto corto con la **ciudad del paciente**",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "b7cf4a0",
+              "kind": "nuevo",
+              "text": "El asistente **verifica la fecha y aclara con qué médico** antes de confirmar",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "fac3831",
+              "kind": "nuevo",
+              "text": "Mejor manejo de **fechas y horas** al agendar",
+              "details": [],
+              "product": "Sistema"
+            }
+          ]
+        },
+        {
+          "emoji": "🩺",
+          "title": "Médicos y consultorios",
+          "items": [
+            {
+              "hash": "0f2c209",
+              "kind": "nuevo",
+              "text": "El asistente detecta mejor cuándo le están **preguntando por una especialidad**",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "3a757ce",
+              "kind": "nuevo",
+              "text": "Mejoramos la **recomendación de especialidad** según lo que describe el paciente",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "f7cf03b",
+              "kind": "nuevo",
+              "text": "El asistente resuelve mejor **a qué especialidad corresponde** lo que pide el paciente",
+              "details": [],
+              "product": "Sistema"
+            }
+          ]
+        },
+        {
+          "emoji": "📈",
+          "title": "Monitoreo y estabilidad",
+          "items": [
+            {
+              "hash": "4dadf9d",
+              "kind": "nuevo",
+              "text": "Si una respuesta del asistente no cumple la calidad esperada, **se corrige o pasa a una persona** antes de llegarle al paciente",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "a85098b",
+              "kind": "nuevo",
+              "text": "Si nadie retoma una conversación que se pasó a una persona, el sistema **avisa**",
+              "details": [],
+              "product": "Sistema"
+            }
+          ]
+        },
+        {
+          "emoji": "📅",
+          "title": "Agenda de Google",
+          "items": [
+            {
+              "hash": "42531fd",
+              "kind": "nuevo",
+              "text": "Arrancó la **sincronización con Google Calendar** de la agenda de cada médico",
+              "details": [],
+              "product": "Sistema"
+            }
+          ]
+        }
+      ],
+      "changes": 9,
+      "internal": 2,
+      "products": [
+        "Sistema"
+      ]
+    },
+    {
+      "date": "2026-06-11",
+      "label": "11 de junio, 2026",
+      "title": "Lo que hicimos",
+      "sections": [
+        {
+          "emoji": "🗓️",
+          "title": "Citas y agenda",
+          "items": [
+            {
+              "hash": "b0119bc",
+              "kind": "nuevo",
+              "text": "Mejor manejo de los **choques de horario** al agendar",
+              "details": [],
+              "product": "Sistema"
+            }
+          ]
+        },
+        {
+          "emoji": "🩺",
+          "title": "Médicos y consultorios",
+          "items": [
+            {
+              "hash": "57da08c",
+              "kind": "nuevo",
+              "text": "El asistente elige mejor **la sede que le queda al paciente**",
+              "details": [],
+              "product": "Sistema"
+            }
+          ]
+        },
+        {
+          "emoji": "🧸",
+          "title": "Pacientes",
+          "items": [
+            {
+              "hash": "a2bdc37",
+              "kind": "nuevo",
+              "text": "El asistente identifica mejor **al menor** y la fecha que se propone para su cita",
+              "details": [],
+              "product": "Sistema"
+            }
+          ]
+        },
+        {
+          "emoji": "📈",
+          "title": "Monitoreo y estabilidad",
+          "items": [
+            {
+              "hash": "00a532c",
+              "kind": "nuevo",
+              "text": "Nueva **sala de observación** para ver en vivo lo que está haciendo el asistente",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "7c0ae33",
+              "kind": "nuevo",
+              "text": "**Métricas del asistente**: cuánto tarda, qué resuelve y dónde se traba",
+              "details": [],
+              "product": "Sistema"
+            }
+          ]
+        }
+      ],
+      "changes": 5,
+      "internal": 0,
+      "products": [
+        "Sistema"
+      ]
+    },
+    {
+      "date": "2026-06-09",
+      "label": "9 de junio, 2026",
+      "title": "Lo que hicimos",
+      "sections": [
+        {
+          "emoji": "📈",
+          "title": "Monitoreo y estabilidad",
+          "items": [
+            {
+              "hash": "696651a",
+              "kind": "nuevo",
+              "text": "Estabilizamos el asistente para que **no se corte a media conversación**",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "e169c15",
+              "kind": "nuevo",
+              "text": "Un **supervisor revisa cada respuesta** del asistente antes de que salga",
+              "details": [],
+              "product": "Sistema"
+            }
+          ]
+        },
+        {
+          "emoji": "🗓️",
+          "title": "Citas y agenda",
+          "items": [
+            {
+              "hash": "7a816f8",
+              "kind": "nuevo",
+              "text": "Si el paciente deja la conversación a medias, el agendado **se cierra solo** y no queda colgado",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "6f5f87b",
+              "kind": "nuevo",
+              "text": "Mejor manejo de una **segunda cita** y de a quién corresponde",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "2523466",
+              "kind": "arreglo",
+              "text": "Si un horario no está disponible, **se conserva el médico** que el paciente ya había elegido",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "f190833",
+              "kind": "arreglo",
+              "text": "Una segunda cita ya **no hereda la especialidad** de la anterior",
+              "details": [],
+              "product": "Sistema"
+            }
+          ]
+        },
+        {
+          "emoji": "🔒",
+          "title": "Seguridad y accesos",
+          "items": [
+            {
+              "hash": "0bbd842",
+              "kind": "nuevo",
+              "text": "Reforzamos la seguridad: revisión de la configuración al arrancar y **freno automático** si alguien intenta abusar del sistema",
+              "details": [],
+              "product": "Sistema"
+            }
+          ]
+        }
+      ],
+      "changes": 7,
+      "internal": 0,
+      "products": [
+        "Sistema"
+      ]
+    },
+    {
+      "date": "2026-06-08",
+      "label": "8 de junio, 2026",
+      "title": "Lo que hicimos",
+      "sections": [
+        {
+          "emoji": "🩺",
+          "title": "Médicos y consultorios",
+          "items": [
+            {
+              "hash": "a3acac4",
+              "kind": "arreglo",
+              "text": "Escribir solo una especialidad (por ejemplo «Cardiología») ya no se toma como sucursal",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "853e3fb",
+              "kind": "arreglo",
+              "text": "El asistente ya no confunde **especialidad y paciente con una ubicación** al buscar médicos",
+              "details": [],
+              "product": "Sistema"
+            }
+          ]
+        },
+        {
+          "emoji": "💬",
+          "title": "WhatsApp y el asistente",
+          "items": [
+            {
+              "hash": "81dbcca",
+              "kind": "nuevo",
+              "text": "Al agendar, el paciente elige horarios y médicos con **botones** en vez de tener que escribir",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "4f6adc2",
+              "kind": "nuevo",
+              "text": "El asistente reconoce mejor los **mensajes de seguimiento**",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "b854bbf",
+              "kind": "arreglo",
+              "text": "Si el paciente manda **varios mensajes seguidos**, el asistente los junta y responde una sola vez",
+              "details": [],
+              "product": "Sistema"
+            }
+          ]
+        },
+        {
+          "emoji": "🧸",
+          "title": "Pacientes",
+          "items": [
+            {
+              "hash": "5217859",
+              "kind": "arreglo",
+              "text": "Agendar para un **segundo hijo** ya no confunde al médico con el paciente",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "1e5c9c0",
+              "kind": "nuevo",
+              "text": "Cuando hay duda de a qué paciente se refiere, el asistente **pregunta**",
+              "details": [],
+              "product": "Sistema"
+            }
+          ]
+        },
+        {
+          "emoji": "🗓️",
+          "title": "Citas y agenda",
+          "items": [
+            {
+              "hash": "eab4064",
+              "kind": "arreglo",
+              "text": "Si el paciente mezcla dudas con agendado, el asistente **pide la sucursal** antes de listar médicos",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "3f90437",
+              "kind": "arreglo",
+              "text": "En Ciudad de México el asistente **pide la sucursal** antes de seguir",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "bfc566b",
+              "kind": "arreglo",
+              "text": "Se destrabó la confirmación y se limpió el listado de médicos en Ciudad de México",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "c789ae6",
+              "kind": "arreglo",
+              "text": "Al preguntar por un médico y una sucursal, el asistente **muestra los horarios**",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "b9b2120",
+              "kind": "nuevo",
+              "text": "El asistente detecta **cambios de fecha** y resuelve los choques que provocan",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "652d00f",
+              "kind": "arreglo",
+              "text": "El botón «Ajustar algo» de la confirmación final ya funciona",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "1b355a4",
+              "kind": "nuevo",
+              "text": "El asistente detecta **sede, médico, día y hora** según la clínica de la que se trate",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "c096bc1",
+              "kind": "arreglo",
+              "text": "El asistente pregunta **de dónde viene el paciente** antes de confirmar la cita",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "63e1cf4",
+              "kind": "arreglo",
+              "text": "El asistente **recuerda en qué punto** del agendado va la conversación",
+              "details": [],
+              "product": "Sistema"
+            }
+          ]
+        },
+        {
+          "emoji": "🔔",
+          "title": "Recordatorios a pacientes",
+          "items": [
+            {
+              "hash": "117a211",
+              "kind": "arreglo",
+              "text": "Preguntar por disponibilidad ya no se confunde con **querer reagendar**",
+              "details": [],
+              "product": "Sistema"
+            }
+          ]
+        }
+      ],
+      "changes": 17,
+      "internal": 1,
+      "products": [
+        "Sistema"
+      ]
+    },
+    {
+      "date": "2026-06-07",
+      "label": "7 de junio, 2026",
+      "title": "Lo que hicimos",
+      "sections": [
+        {
+          "emoji": "🗓️",
+          "title": "Citas y agenda",
+          "items": [
+            {
+              "hash": "52d73af",
+              "kind": "nuevo",
+              "text": "Mejor manejo de errores al agendar: si algo falla, el paciente **recibe una respuesta** en vez de silencio",
+              "details": [],
+              "product": "Sistema"
+            }
+          ]
+        }
+      ],
+      "changes": 1,
+      "internal": 0,
+      "products": [
+        "Sistema"
+      ]
+    },
+    {
+      "date": "2026-06-04",
+      "label": "4 de junio, 2026",
+      "title": "Lo que hicimos",
+      "sections": [
+        {
+          "emoji": "📈",
+          "title": "Monitoreo y estabilidad",
+          "items": [
+            {
+              "hash": "1ee7299",
+              "kind": "nuevo",
+              "text": "Mejoramos el **pase de conversaciones a una persona**",
+              "details": [],
+              "product": "Sistema"
+            }
+          ]
+        },
+        {
+          "emoji": "🗓️",
+          "title": "Citas y agenda",
+          "items": [
+            {
+              "hash": "cedc46e",
+              "kind": "nuevo",
+              "text": "Mejoramos la **confirmación de citas**",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "1325b9a",
+              "kind": "nuevo",
+              "text": "Mejoramos el flujo de agendado y **cómo se detecta la ubicación** del paciente",
+              "details": [],
+              "product": "Sistema"
+            }
+          ]
+        },
+        {
+          "emoji": "💬",
+          "title": "WhatsApp y el asistente",
+          "items": [
+            {
+              "hash": "e725771",
+              "kind": "nuevo",
+              "text": "Si la conversación se queda quieta, el asistente manda un **mensaje de bienvenida** para retomarla",
+              "details": [],
+              "product": "Sistema"
+            }
+          ]
+        },
+        {
+          "emoji": "🩺",
+          "title": "Médicos y consultorios",
+          "items": [
+            {
+              "hash": "c424721",
+              "kind": "nuevo",
+              "text": "El asistente ubica mejor las **sucursales de Ciudad de México**",
+              "details": [],
+              "product": "Sistema"
+            }
+          ]
+        }
+      ],
+      "changes": 5,
+      "internal": 0,
+      "products": [
+        "Sistema"
+      ]
+    },
+    {
+      "date": "2026-06-03",
+      "label": "3 de junio, 2026",
+      "title": "Lo que hicimos",
+      "sections": [
+        {
+          "emoji": "🗓️",
+          "title": "Citas y agenda",
+          "items": [
+            {
+              "hash": "b196a44",
+              "kind": "nuevo",
+              "text": "El asistente responde con **la cita más próxima disponible**",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "1b61d2a",
+              "kind": "nuevo",
+              "text": "Nueva **barra de herramientas** en la agenda y aviso de «el asistente está escribiendo» en el chat",
+              "details": [],
+              "product": "Panel web"
+            }
+          ]
+        },
+        {
+          "emoji": "💬",
+          "title": "WhatsApp y el asistente",
+          "items": [
+            {
+              "hash": "f230894",
+              "kind": "nuevo",
+              "text": "El panel recibe y muestra las **fotos y audios** que mandan los pacientes",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "9b47779",
+              "kind": "nuevo",
+              "text": "Mejores respuestas del asistente de recepción",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "d6d02f2",
+              "kind": "nuevo",
+              "text": "Rehicimos el chat del panel para que **cargue más rápido**",
+              "details": [],
+              "product": "Panel web"
+            }
+          ]
+        },
+        {
+          "emoji": "📈",
+          "title": "Monitoreo y estabilidad",
+          "items": [
+            {
+              "hash": "733cef8",
+              "kind": "nuevo",
+              "text": "**Avisos en tiempo real** cuando una conversación necesita que alguien la revise",
+              "details": [],
+              "product": "Sistema"
+            }
+          ]
+        },
+        {
+          "emoji": "🔒",
+          "title": "Seguridad y accesos",
+          "items": [
+            {
+              "hash": "9d001b9",
+              "kind": "arreglo",
+              "text": "Corregimos **qué ve cada rol** dentro del panel",
+              "details": [],
+              "product": "Panel web"
+            }
+          ]
+        }
+      ],
+      "changes": 7,
+      "internal": 0,
+      "products": [
+        "Sistema",
+        "Panel web"
+      ]
+    },
+    {
+      "date": "2026-06-02",
+      "label": "2 de junio, 2026",
+      "title": "Lo que hicimos",
+      "sections": [
+        {
+          "emoji": "🩺",
+          "title": "Médicos y consultorios",
+          "items": [
+            {
+              "hash": "9acb02c",
+              "kind": "nuevo",
+              "text": "El asistente responde mejor **qué especialidades cubre cada sede**",
+              "details": [],
+              "product": "Sistema"
+            }
+          ]
+        },
+        {
+          "emoji": "📚",
+          "title": "Preguntas frecuentes",
+          "items": [
+            {
+              "hash": "074aa9d",
+              "kind": "nuevo",
+              "text": "Cargamos las **preguntas frecuentes de Kinsmile**",
+              "details": [],
+              "product": "Sistema"
+            }
+          ]
+        }
+      ],
+      "changes": 2,
+      "internal": 0,
+      "products": [
+        "Sistema"
+      ]
+    },
+    {
+      "date": "2026-05-29",
+      "label": "29 de mayo, 2026",
+      "title": "Lo que hicimos",
+      "sections": [
+        {
+          "emoji": "📚",
+          "title": "Preguntas frecuentes",
+          "items": [
+            {
+              "hash": "5115366",
+              "kind": "arreglo",
+              "text": "El asistente responde dudas **sin perder el hilo** del agendado",
+              "details": [],
+              "product": "Sistema"
+            }
+          ]
+        }
+      ],
+      "changes": 1,
+      "internal": 0,
+      "products": [
+        "Sistema"
+      ]
+    },
+    {
+      "date": "2026-05-28",
+      "label": "28 de mayo, 2026",
+      "title": "Lo que hicimos",
+      "sections": [
+        {
+          "emoji": "📚",
+          "title": "Preguntas frecuentes",
+          "items": [
+            {
+              "hash": "06e8057",
+              "kind": "arreglo",
+              "text": "Preguntas frecuentes de **estacionamiento por sede** y de dentistas",
+              "details": [],
+              "product": "Sistema"
+            }
+          ]
+        },
+        {
+          "emoji": "🗓️",
+          "title": "Citas y agenda",
+          "items": [
+            {
+              "hash": "5ef07b9",
+              "kind": "arreglo",
+              "text": "Corregimos **la hora** que aparecía en el resumen de la cita y en la confirmación al tutor",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "962407f",
+              "kind": "arreglo",
+              "text": "El asistente entiende **«mañana»** y otras fechas relativas",
+              "details": [],
+              "product": "Sistema"
+            }
+          ]
+        },
+        {
+          "emoji": "🧸",
+          "title": "Pacientes",
+          "items": [
+            {
+              "hash": "dc28c4c",
+              "kind": "arreglo",
+              "text": "Corregimos la selección del paciente cuando **escribe el tutor**",
+              "details": [],
+              "product": "Sistema"
+            }
+          ]
+        }
+      ],
+      "changes": 4,
+      "internal": 0,
+      "products": [
+        "Sistema"
+      ]
+    },
+    {
+      "date": "2026-05-27",
+      "label": "27 de mayo, 2026",
+      "title": "Lo que hicimos",
+      "sections": [
+        {
+          "emoji": "🗓️",
+          "title": "Citas y agenda",
+          "items": [
+            {
+              "hash": "56cb00d",
+              "kind": "nuevo",
+              "text": "Si la clínica tiene **una sola sede**, el asistente ya no la pregunta",
+              "details": [],
+              "product": "Sistema"
+            }
+          ]
+        },
+        {
+          "emoji": "💬",
+          "title": "WhatsApp y el asistente",
+          "items": [
+            {
+              "hash": "448b835",
+              "kind": "nuevo",
+              "text": "El sistema procesa **varios mensajes de WhatsApp a la vez** sin atorarse",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "1da5101",
+              "kind": "nuevo",
+              "text": "Simplificamos la **configuración de WhatsApp** en el panel",
+              "details": [],
+              "product": "Panel web"
+            }
+          ]
+        }
+      ],
+      "changes": 3,
+      "internal": 0,
+      "products": [
+        "Sistema",
+        "Panel web"
+      ]
+    },
+    {
+      "date": "2026-05-26",
+      "label": "26 de mayo, 2026",
+      "title": "Lo que hicimos",
+      "sections": [
+        {
+          "emoji": "🔒",
+          "title": "Seguridad y accesos",
+          "items": [
+            {
+              "hash": "dba3cc9",
+              "kind": "nuevo",
+              "text": "Protegimos las pantallas de administración para que **solo entre quien debe**",
+              "details": [],
+              "product": "Panel web"
+            }
+          ]
+        },
+        {
+          "emoji": "🏥",
+          "title": "Organización y equipo",
+          "items": [
+            {
+              "hash": "64948e8",
+              "kind": "nuevo",
+              "text": "Nuevos **roles por organización** para el equipo de cada clínica",
+              "details": [],
+              "product": "Panel web"
+            }
+          ]
+        }
+      ],
+      "changes": 2,
+      "internal": 0,
+      "products": [
+        "Panel web"
+      ]
+    },
+    {
+      "date": "2026-05-24",
+      "label": "24 de mayo, 2026",
+      "title": "Lo que hicimos",
+      "sections": [
+        {
+          "emoji": "💬",
+          "title": "WhatsApp y el asistente",
+          "items": [
+            {
+              "hash": "0e87320",
+              "kind": "nuevo",
+              "text": "Migramos toda la mensajería de WhatsApp a **Kapso**, la base sobre la que corre hoy el asistente",
+              "details": [],
+              "product": "Sistema"
+            }
+          ]
+        }
+      ],
+      "changes": 1,
+      "internal": 0,
+      "products": [
+        "Sistema"
+      ]
+    }
+  ],
+  "sinceNote": "La bitácora arranca el 24 de mayo de 2026. Antes de esa fecha el historial no tiene el detalle necesario para resumirlo con precisión, así que preferimos no inventarlo.",
+  "totals": {
+    "days": 25,
+    "changes": 109,
+    "since": "2026-05-24",
+    "sinceLabel": "24 de mayo, 2026"
+  }
+}

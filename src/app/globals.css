@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  /* Paleta Kindoc: las tres píldoras del logo + el gris del wordmark. */
+  --color-kd-cyan: #59c5d9;
+  --color-kd-cyan-deep: #25b7cb;
+  --color-kd-pink: #d95ba0;
+  --color-kd-lime: #ddf026;
+  --color-kd-gray: #596066;
+
+  /* Tonos derivados para fondos y texto. */
+  --color-kd-ink: #1d3a42;
+  --color-kd-ink-soft: #2b4f59;
+  --color-kd-paper: #f2f6f7;
+  --color-kd-line: #e2eaec;
+  --color-kd-muted: #7c878c;
+
+  --font-sans: var(--font-jakarta), system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-kd-paper);
+    color: var(--color-kd-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* El contenido se escribe en Markdown ligero; <strong> lleva el énfasis.
+     El color se hereda a propósito: sobre las tarjetas oscuras el énfasis debe
+     seguir siendo blanco, y quien necesite oscurecerlo lo pide en su clase. */
+  strong {
+    font-weight: 700;
+    color: inherit;
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
