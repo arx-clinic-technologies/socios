@@ -24,7 +24,7 @@ export function SiteFooter() {
       <p className="text-[13px] leading-relaxed text-kd-muted">
         Kindoc · bitácora para socios · {totals.changes} mejoras publicadas en{" "}
         {totals.days} entregas desde el {totals.sinceLabel}.{" "}
-        <Link href="/historial" className="font-semibold text-kd-cyan-deep underline">
+        <Link href="/historial" className="font-semibold text-kd-cyan-ink underline">
           Ver todas las entregas
         </Link>
       </p>

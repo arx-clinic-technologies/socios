@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { KindocMark } from "@/components/brand";
+import { KindocLogo } from "@/components/brand";
 import { RichText } from "@/components/rich-text";
 import type { Day, Kind } from "@/lib/updates";
 import { shortLabel } from "@/lib/updates";
@@ -60,20 +60,20 @@ export function DayView({
 }) {
   return (
     <article>
-      <header className="bg-kd-ink px-6 pt-9 pb-11 sm:px-9">
-        <KindocMark />
-        <p className="mt-6 text-[11px] font-bold tracking-[0.18em] text-kd-cyan uppercase">
+      <header className="border-b border-kd-line bg-white px-6 pt-8 pb-9 sm:px-9">
+        <KindocLogo />
+        <p className="mt-6 text-[11px] font-bold tracking-[0.18em] text-kd-cyan-ink uppercase">
           Resumen para socios
         </p>
-        <h1 className="mt-2 text-[2rem] leading-[1.15] font-extrabold text-white sm:text-[2.4rem]">
+        <h1 className="mt-2 text-[2rem] leading-[1.15] font-extrabold text-kd-ink sm:text-[2.4rem]">
           {isLatest ? "Lo que hicimos" : day.title}
         </h1>
         <div className="mt-5 flex flex-wrap items-center gap-2">
-          <span className="rounded-full bg-white/10 px-4 py-2 text-sm font-bold text-white">
+          <span className="rounded-full border border-kd-line bg-kd-paper px-4 py-2 text-sm font-bold text-kd-ink">
             {day.label}
           </span>
           {isLatest && (
-            <span className="rounded-full bg-kd-lime/90 px-3 py-2 text-xs font-bold text-kd-ink">
+            <span className="rounded-full bg-kd-lime px-3 py-2 text-xs font-bold text-kd-ink">
               Última entrega
             </span>
           )}
@@ -83,7 +83,7 @@ export function DayView({
       <div className="space-y-6 px-4 pt-8 pb-2 sm:px-8">
         {day.sections.map((section, index) => (
           <section key={section.title} className="relative">
-            <span className="absolute -top-2 left-1 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-kd-cyan-deep text-sm font-bold text-white shadow-md">
+            <span className="absolute -top-2 left-1 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-kd-cyan-ink text-sm font-bold text-white shadow-md">
               {index + 1}
             </span>
             <div className="rounded-2xl bg-white px-5 pt-7 pb-6 shadow-[0_2px_14px_rgba(29,58,66,0.07)] sm:px-7">

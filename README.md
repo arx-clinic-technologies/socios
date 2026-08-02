@@ -98,8 +98,13 @@ npm run bitacora:check   # falla si updates.json quedó desactualizado
 ## Marca
 
 Paleta Kindoc tomada del Dashboard: cyan `#59C5D9`, rosa `#D95BA0`, lima
-`#DDF026`, gris `#596066`, y el teal profundo `#1D3A42` para los bloques
-oscuros. Tipografía Plus Jakarta Sans, la misma del panel.
+`#DDF026` y gris `#596066`. Tipografía Plus Jakarta Sans, la misma del panel.
+
+La cabecera es blanca con el logo oficial (`public/kindoc.png`), y el color lo
+ponen solo las píldoras del logo y los puntos de cada mejora. Los grises salen
+de la familia del wordmark (`#2F3439`) para no desviarse al azul. Para texto
+pequeño sobre blanco se usa `#0E7490` en lugar del cyan de marca, que no da
+contraste suficiente.
 
 ## Nota sobre `npm audit`
 

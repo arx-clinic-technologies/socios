@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { KindocMark } from "@/components/brand";
+import { KindocLogo } from "@/components/brand";
 import { SiteFooter } from "@/components/site-footer";
 import { getBitacora, monthOf, type Day } from "@/lib/updates";
 
@@ -23,20 +23,20 @@ export default function HistorialPage() {
 
   return (
     <main>
-      <header className="bg-kd-ink px-6 pt-9 pb-10 sm:px-9">
-        <KindocMark />
-        <p className="mt-6 text-[11px] font-bold tracking-[0.18em] text-kd-cyan uppercase">
+      <header className="border-b border-kd-line bg-white px-6 pt-8 pb-9 sm:px-9">
+        <KindocLogo />
+        <p className="mt-6 text-[11px] font-bold tracking-[0.18em] text-kd-cyan-ink uppercase">
           Resumen para socios
         </p>
-        <h1 className="mt-2 text-[2rem] leading-[1.15] font-extrabold text-white">
+        <h1 className="mt-2 text-[2rem] leading-[1.15] font-extrabold text-kd-ink">
           Todas las entregas
         </h1>
-        <p className="mt-3 text-sm leading-relaxed text-white/70">
+        <p className="mt-3 text-sm leading-relaxed text-kd-gray">
           {totals.changes} mejoras en {totals.days} entregas desde el {totals.sinceLabel}.
         </p>
         <Link
           href="/"
-          className="mt-5 inline-block rounded-full bg-white/10 px-4 py-2 text-sm font-bold text-white transition-colors hover:bg-white/20"
+          className="mt-5 inline-block rounded-full border border-kd-line bg-kd-paper px-4 py-2 text-sm font-bold text-kd-ink transition-colors hover:border-kd-cyan"
         >
           ← Volver a la última
         </Link>
@@ -57,7 +57,7 @@ export default function HistorialPage() {
                   >
                     <div className="flex items-baseline justify-between gap-3">
                       <span className="font-bold text-kd-ink">{day.label}</span>
-                      <span className="shrink-0 text-[12.5px] font-semibold text-kd-cyan-deep">
+                      <span className="shrink-0 text-[12.5px] font-semibold text-kd-cyan-ink">
                         {day.changes} {day.changes === 1 ? "mejora" : "mejoras"}
                       </span>
                     </div>

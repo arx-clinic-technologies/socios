@@ -8,12 +8,16 @@
   --color-kd-lime: #ddf026;
   --color-kd-gray: #596066;
 
-  /* Tonos derivados para fondos y texto. */
-  --color-kd-ink: #1d3a42;
-  --color-kd-ink-soft: #2b4f59;
-  --color-kd-paper: #f2f6f7;
-  --color-kd-line: #e2eaec;
-  --color-kd-muted: #7c878c;
+  /* Tonos derivados para fondos y texto: familia del gris del wordmark, sin
+     desviarse al azul, para que el color lo pongan solo las píldoras del logo. */
+  --color-kd-ink: #2f3439;
+  --color-kd-ink-soft: #4a5157;
+  --color-kd-paper: #f3f5f6;
+  --color-kd-line: #e4e8ea;
+  --color-kd-muted: #838c92;
+
+  /* Cyan legible sobre blanco: el #59C5D9 de marca no da contraste en texto. */
+  --color-kd-cyan-ink: #0e7490;
 
   --font-sans: var(--font-jakarta), system-ui, -apple-system, sans-serif;
 }
