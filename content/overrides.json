@@ -5,6 +5,14 @@
   "sinceNote": "La bitácora arranca el 24 de mayo de 2026. Antes de esa fecha el historial no tiene el detalle necesario para resumirlo con precisión, así que preferimos no inventarlo.",
 
   "weeks": {
+    "2026-08-03": {
+      "title": "La agenda de Google, en vivo en el panel",
+      "stat": {
+        "value": "63",
+        "text": "**63 agendas conectadas.** Las agendas de Google de los médicos ya se sincronizan solas con Kindoc: lo que cada uno bloquea en su calendario se respeta al agendar citas."
+      },
+      "note": "La conexión con Google Calendar que dejamos lista la semana pasada quedó encendida en producción. Además se cargaron los correos reales de los médicos y la lista de precios vigente por sede."
+    },
     "2026-07-27": {
       "title": "Lo que hicimos esta semana",
       "stat": {
@@ -16,6 +24,80 @@
   },
 
   "commits": {
+    "408c26f": {
+      "area": "agenda-google",
+      "text": "Los eventos de la **agenda de Google** de cada médico ahora se ven en todas las vistas del calendario",
+      "details": [
+        "Se distinguen con el color y el símbolo de Google, y al tocarlos se abre el detalle: horario, ubicación, invitados y enlace directo al evento",
+        "Esos espacios se administran desde Google; el panel los muestra para que nadie agende encima",
+        "El detalle se consulta a Google en el momento y no se guarda: la agenda personal del médico sigue siendo privada"
+      ]
+    },
+    "a99ebe4": { "hide": true },
+    "1be77fd": {
+      "area": "agenda-google",
+      "kind": "arreglo",
+      "text": "Los eventos de Google también aparecen al ver **varios médicos a la vez**"
+    },
+    "3a0e4e8": {
+      "area": "agenda-google",
+      "kind": "arreglo",
+      "text": "Cada espacio ocupado muestra su título aunque el calendario se vea en tamaño reducido"
+    },
+    "4dd4cb7": {
+      "area": "agenda-google",
+      "kind": "arreglo",
+      "text": "Los espacios ocupados de la **tarde** ya aparecen completos en la vista del día: un desfase de horario los dejaba fuera"
+    },
+    "a64ecc3": {
+      "area": "agenda-google",
+      "kind": "arreglo",
+      "text": "Al agendar una cita ya no se ofrecen horarios que el médico tiene **ocupados en su agenda de Google**"
+    },
+    "656dc2a": {
+      "area": "citas",
+      "kind": "arreglo",
+      "text": "La vista de un solo día ya muestra **todas las citas**: un desfase de horario dejaba fuera algunas, sobre todo las del cierre de la semana"
+    },
+    "68cf0da": {
+      "area": "citas",
+      "kind": "arreglo",
+      "text": "El calendario ya no muestra huecos libres que no existen ni días vacíos que sí tienen citas",
+      "details": [
+        "Si un médico no atiende cierto día, ya no se ofrecen sus horarios al agendar",
+        "Cuando algo no se puede cargar, la pantalla lo avisa y ofrece reintentar, en vez de verse como un día sin citas"
+      ]
+    },
+    "5858db1": {
+      "area": "citas",
+      "kind": "arreglo",
+      "text": "Al cambiar entre vistas del calendario ya no se pierde el médico que se estaba consultando"
+    },
+    "de61f71": {
+      "area": "citas",
+      "kind": "arreglo",
+      "text": "Se quitó un aviso de error que aparecía sin motivo al abrir el calendario"
+    },
+    "bf9bc85": {
+      "area": "medicos",
+      "kind": "arreglo",
+      "text": "El correo diario con la agenda de mañana le llega a cada médico **una sola vez**, sin importar reinicios del sistema"
+    },
+    "ce5139f": {
+      "area": "medicos",
+      "kind": "arreglo",
+      "text": "La ficha de cada médico vuelve a mostrar sus **horarios por sede**, tomados de su disponibilidad real"
+    },
+    "f5c51e2": {
+      "area": "medicos",
+      "kind": "arreglo",
+      "text": "En la pantalla de editar médico, el **correo ya se guarda** y los permisos quedaron como deben",
+      "details": [
+        "El personal de recepción ya puede guardar la configuración de consultorios de un médico",
+        "Se cerró la posibilidad de mover un médico a otra clínica sin la autorización correspondiente"
+      ]
+    },
+
     "428604a": {
       "area": "citas",
       "text": "Una cita se puede mover de un médico a otro **arrastrándola** en la agenda, y el sistema verifica que quien la mueve tenga permiso para hacerlo"

@@ -1,6 +1,143 @@
 {
   "weeks": [
     {
+      "start": "2026-08-03",
+      "end": "2026-08-09",
+      "label": "3 – 9 de agosto, 2026",
+      "title": "La agenda de Google, en vivo en el panel",
+      "sections": [
+        {
+          "emoji": "📅",
+          "title": "Agenda de Google",
+          "items": [
+            {
+              "hash": "a64ecc3",
+              "kind": "arreglo",
+              "text": "Al agendar una cita ya no se ofrecen horarios que el médico tiene **ocupados en su agenda de Google**",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "4dd4cb7",
+              "kind": "arreglo",
+              "text": "Los espacios ocupados de la **tarde** ya aparecen completos en la vista del día: un desfase de horario los dejaba fuera",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "3a0e4e8",
+              "kind": "arreglo",
+              "text": "Cada espacio ocupado muestra su título aunque el calendario se vea en tamaño reducido",
+              "details": [],
+              "product": "Panel web"
+            },
+            {
+              "hash": "1be77fd",
+              "kind": "arreglo",
+              "text": "Los eventos de Google también aparecen al ver **varios médicos a la vez**",
+              "details": [],
+              "product": "Panel web"
+            },
+            {
+              "hash": "408c26f",
+              "kind": "nuevo",
+              "text": "Los eventos de la **agenda de Google** de cada médico ahora se ven en todas las vistas del calendario",
+              "details": [
+                "Se distinguen con el color y el símbolo de Google, y al tocarlos se abre el detalle: horario, ubicación, invitados y enlace directo al evento",
+                "Esos espacios se administran desde Google; el panel los muestra para que nadie agende encima",
+                "El detalle se consulta a Google en el momento y no se guarda: la agenda personal del médico sigue siendo privada"
+              ],
+              "product": "Panel web"
+            }
+          ]
+        },
+        {
+          "emoji": "🗓️",
+          "title": "Citas y agenda",
+          "items": [
+            {
+              "hash": "656dc2a",
+              "kind": "arreglo",
+              "text": "La vista de un solo día ya muestra **todas las citas**: un desfase de horario dejaba fuera algunas, sobre todo las del cierre de la semana",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "de61f71",
+              "kind": "arreglo",
+              "text": "Se quitó un aviso de error que aparecía sin motivo al abrir el calendario",
+              "details": [],
+              "product": "Panel web"
+            },
+            {
+              "hash": "5858db1",
+              "kind": "arreglo",
+              "text": "Al cambiar entre vistas del calendario ya no se pierde el médico que se estaba consultando",
+              "details": [],
+              "product": "Panel web"
+            },
+            {
+              "hash": "68cf0da",
+              "kind": "arreglo",
+              "text": "El calendario ya no muestra huecos libres que no existen ni días vacíos que sí tienen citas",
+              "details": [
+                "Si un médico no atiende cierto día, ya no se ofrecen sus horarios al agendar",
+                "Cuando algo no se puede cargar, la pantalla lo avisa y ofrece reintentar, en vez de verse como un día sin citas"
+              ],
+              "product": "Panel web"
+            }
+          ]
+        },
+        {
+          "emoji": "🩺",
+          "title": "Médicos y consultorios",
+          "items": [
+            {
+              "hash": "f5c51e2",
+              "kind": "arreglo",
+              "text": "En la pantalla de editar médico, el **correo ya se guarda** y los permisos quedaron como deben",
+              "details": [
+                "El personal de recepción ya puede guardar la configuración de consultorios de un médico",
+                "Se cerró la posibilidad de mover un médico a otra clínica sin la autorización correspondiente"
+              ],
+              "product": "Sistema"
+            },
+            {
+              "hash": "bf9bc85",
+              "kind": "arreglo",
+              "text": "El correo diario con la agenda de mañana le llega a cada médico **una sola vez**, sin importar reinicios del sistema",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "ce5139f",
+              "kind": "arreglo",
+              "text": "La ficha de cada médico vuelve a mostrar sus **horarios por sede**, tomados de su disponibilidad real",
+              "details": [],
+              "product": "Panel web"
+            }
+          ]
+        }
+      ],
+      "changes": 12,
+      "internal": 3,
+      "products": [
+        "Sistema",
+        "Panel web",
+        "Asistente de WhatsApp",
+        "Monitoreo"
+      ],
+      "dates": [
+        "2026-08-04",
+        "2026-08-06"
+      ],
+      "stat": {
+        "value": "63",
+        "text": "**63 agendas conectadas.** Las agendas de Google de los médicos ya se sincronizan solas con Kindoc: lo que cada uno bloquea en su calendario se respeta al agendar citas."
+      },
+      "note": "La conexión con Google Calendar que dejamos lista la semana pasada quedó encendida en producción. Además se cargaron los correos reales de los médicos y la lista de precios vigente por sede."
+    },
+    {
       "start": "2026-07-27",
       "end": "2026-08-02",
       "label": "27 de julio – 2 de agosto, 2026",
@@ -1175,8 +1312,8 @@
   ],
   "sinceNote": "La bitácora arranca el 24 de mayo de 2026. Antes de esa fecha el historial no tiene el detalle necesario para resumirlo con precisión, así que preferimos no inventarlo.",
   "totals": {
-    "weeks": 8,
-    "changes": 109,
+    "weeks": 9,
+    "changes": 121,
     "since": "2026-05-18",
     "sinceLabel": "24 de mayo, 2026"
   }
