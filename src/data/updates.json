@@ -135,7 +135,7 @@
         "value": "63",
         "text": "**63 agendas conectadas.** Las agendas de Google de los médicos ya se sincronizan solas con Kindoc: lo que cada uno bloquea en su calendario se respeta al agendar citas."
       },
-      "note": "La conexión con Google Calendar que dejamos lista la semana pasada quedó encendida en producción. Además se cargaron los correos reales de los médicos y la lista de precios vigente por sede."
+      "note": "La conexión con Google Calendar que dejamos lista la semana pasada quedó encendida en producción, y la probamos de punta a punta con el doctor Edgar Barajas Colón: se agendó una cita desde la aplicación y quedó registrada correctamente en su calendario de Google. Además se cargaron los correos reales de los médicos y la lista de precios vigente por sede."
     },
     {
       "start": "2026-07-27",
