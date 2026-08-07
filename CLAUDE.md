@@ -7,7 +7,7 @@ presente al tocar código.
 
 ## Qué es
 
-Bitácora **para socios, no para desarrolladores**. Repo independiente, solo local (sin remote), se
+Bitácora **para socios, no para desarrolladores**. Repo independiente (`arx-clinic-technologies/socios`), se
 publica en Vercel. Next.js 16 + React 19 + Tailwind 4.
 
 ## La regla que gobierna todo
