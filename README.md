@@ -74,6 +74,7 @@ esa semana, aunque el trabajo se haya subido el jueves:
   "weeks": {
     "2026-07-27": {
       "title": "Lo que hicimos esta semana",
+      "mission": "**La frase grande de la semana**, arriba de las secciones.",
       "stat": { "value": "0", "text": "**Cero interrupciones.** …" },
       "note": "Nota al pie de esa entrega."
     }
@@ -81,7 +82,8 @@ esa semana, aunque el trabajo se haya subido el jueves:
 }
 ```
 
-El `stat` es ese bloque oscuro con un número grande: úsalo para el dato que
+La `mission` es el banner en lima que abre la entrega: una sola frase, en tono
+de objetivo de la semana. El `stat` es ese bloque oscuro con un número grande: úsalo para el dato que
 resuma la semana (cero caídas, cuántas citas se agendaron solas, etc.). Si no lo
 defines, la entrega simplemente no lo muestra.
 
