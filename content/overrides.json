@@ -5,6 +5,14 @@
   "sinceNote": "La bitácora arranca el 24 de mayo de 2026. Antes de esa fecha el historial no tiene el detalle necesario para resumirlo con precisión, así que preferimos no inventarlo.",
 
   "weeks": {
+    "2026-08-10": {
+      "title": "La aplicación quedó lista para el piloto",
+      "stat": {
+        "value": "3",
+        "text": "**La app está lista para probarse con los primeros 3 doctores.** El piloto se enciende médico por médico: el asistente solo agenda con quienes ya están dentro, y cada doctor nuevo se suma con un clic desde el panel."
+      },
+      "note": "En cuanto WhatsApp apruebe la plantilla del mensaje, los doctores del piloto también recibirán cada noche su agenda del día siguiente directo en su teléfono."
+    },
     "2026-08-03": {
       "title": "La agenda de Google, en vivo en el panel",
       "stat": {
@@ -24,6 +32,78 @@
   },
 
   "commits": {
+    "7fb4056": {
+      "area": "medicos",
+      "text": "El piloto se enciende **médico por médico**: cada doctor se suma a la prueba cuando su información está lista"
+    },
+    "0ce8cc1": {
+      "area": "medicos",
+      "text": "Desde la tabla de médicos del panel se **activa o se quita del piloto a cada doctor** con un clic"
+    },
+    "ba2fca7": {
+      "area": "medicos",
+      "text": "Nueva pestaña **Piloto** en el panel para ver de un vistazo qué médicos participan de la prueba"
+    },
+    "b7ab762": {
+      "area": "seguridad",
+      "kind": "arreglo",
+      "text": "Solo el **administrador del sistema** puede decidir qué médicos entran al piloto"
+    },
+    "563a998": {
+      "area": "medicos",
+      "text": "El asistente de WhatsApp **solo ofrece y agenda citas con los médicos del piloto**"
+    },
+    "76872e1": {
+      "area": "whatsapp",
+      "text": "Los doctores del piloto pueden **pedirle su agenda al asistente por WhatsApp**: tocan «Ver agenda» y reciben su día completo",
+      "details": [
+        "La agenda junta las citas de Kindoc con los compromisos de su calendario de Google",
+        "El asistente reconoce al doctor por su número y le responde directo, sin mezclarlo con las conversaciones de pacientes",
+        "Se reforzó el canal: los mensajes duplicados se descartan y, si algo falla, la conversación pasa a una persona"
+      ]
+    },
+    "e9ce053": {
+      "area": "whatsapp",
+      "text": "Cada noche, los médicos del piloto recibirán por **WhatsApp su agenda del día siguiente**",
+      "details": [
+        "El mensaje incluye el botón «Ver agenda» para pedir el detalle completo al momento",
+        "Queda listo para encenderse en cuanto WhatsApp apruebe la plantilla del mensaje"
+      ]
+    },
+    "0986aaa": {
+      "area": "whatsapp",
+      "text": "Desde el Centro Admin se **configura el mensaje diario de agenda** que recibirán los médicos, clínica por clínica"
+    },
+    "964f8b1": {
+      "area": "agenda-google",
+      "text": "La conexión con Google Calendar ahora es de **ida y vuelta, y al instante**",
+      "details": [
+        "Mover una cita en el calendario de Google la reagenda en Kindoc, avisa al paciente por WhatsApp y ajusta los recordatorios",
+        "Borrar el evento en Google cancela la cita; si el nuevo horario choca con otra, el cambio se revierte y se le avisa al doctor",
+        "Se corrigió un desfase que podía correr la hora de las citas creadas desde el panel"
+      ]
+    },
+    "0c5e9bf": {
+      "area": "agenda-google",
+      "text": "Cuando un médico bloquea un espacio en su calendario de Google, el panel lo muestra **al instante, sin recargar la página**",
+      "details": [
+        "También se pulió la ventana de nueva cita"
+      ]
+    },
+    "f7d1c0f": {
+      "area": "monitoreo",
+      "text": "El **estado del asistente se ve de una sola mirada** en el Centro Admin: si está encendido, qué clínicas atiende y cómo está cada pieza"
+    },
+    "dcdc348": {
+      "area": "medicos",
+      "kind": "arreglo",
+      "text": "Un médico dado de alta desde el panel queda asignado a **su clínica**, y las fechas de nacimiento se guardan exactas"
+    },
+    "df3a226": {
+      "area": "seguridad",
+      "text": "El **rol de recepción** quedó listo: menú enfocado en lo esencial y alta de pacientes eligiendo al médico tratante"
+    },
+
     "408c26f": {
       "area": "agenda-google",
       "text": "Los eventos de la **agenda de Google** de cada médico ahora se ven en todas las vistas del calendario",

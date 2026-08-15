@@ -66,7 +66,9 @@ export function WeekView({
           Entrega semanal para socios
         </p>
         <h1 className="mt-2 text-[2rem] leading-[1.15] font-extrabold text-kd-ink sm:text-[2.4rem]">
-          {isLatest ? "Lo que hicimos esta semana" : week.title}
+          {isLatest && week.title === "Lo que hicimos"
+            ? "Lo que hicimos esta semana"
+            : week.title}
         </h1>
         <div className="mt-5 flex flex-wrap items-center gap-2">
           <span className="rounded-full border border-kd-line bg-kd-paper px-4 py-2 text-sm font-bold text-kd-ink">
@@ -119,8 +121,10 @@ export function WeekView({
         {week.internal > 0 && (
           <p className="px-1 text-[13px] leading-relaxed text-kd-muted">
             Además, {week.internal}{" "}
-            {week.internal === 1 ? "ajuste interno" : "ajustes internos"} de
-            mantenimiento que no cambian lo que ve el paciente.
+            {week.internal === 1
+              ? "ajuste interno de mantenimiento que no cambia"
+              : "ajustes internos de mantenimiento que no cambian"}{" "}
+            lo que ve el paciente.
           </p>
         )}
 

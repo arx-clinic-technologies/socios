@@ -1,6 +1,166 @@
 {
   "weeks": [
     {
+      "start": "2026-08-10",
+      "end": "2026-08-16",
+      "label": "10 – 16 de agosto, 2026",
+      "title": "La aplicación quedó lista para el piloto",
+      "sections": [
+        {
+          "emoji": "💬",
+          "title": "WhatsApp y el asistente",
+          "items": [
+            {
+              "hash": "e9ce053",
+              "kind": "nuevo",
+              "text": "Cada noche, los médicos del piloto recibirán por **WhatsApp su agenda del día siguiente**",
+              "details": [
+                "El mensaje incluye el botón «Ver agenda» para pedir el detalle completo al momento",
+                "Queda listo para encenderse en cuanto WhatsApp apruebe la plantilla del mensaje"
+              ],
+              "product": "Sistema"
+            },
+            {
+              "hash": "0986aaa",
+              "kind": "nuevo",
+              "text": "Desde el Centro Admin se **configura el mensaje diario de agenda** que recibirán los médicos, clínica por clínica",
+              "details": [],
+              "product": "Panel web"
+            },
+            {
+              "hash": "76872e1",
+              "kind": "nuevo",
+              "text": "Los doctores del piloto pueden **pedirle su agenda al asistente por WhatsApp**: tocan «Ver agenda» y reciben su día completo",
+              "details": [
+                "La agenda junta las citas de Kindoc con los compromisos de su calendario de Google",
+                "El asistente reconoce al doctor por su número y le responde directo, sin mezclarlo con las conversaciones de pacientes",
+                "Se reforzó el canal: los mensajes duplicados se descartan y, si algo falla, la conversación pasa a una persona"
+              ],
+              "product": "Asistente de WhatsApp"
+            }
+          ]
+        },
+        {
+          "emoji": "📅",
+          "title": "Agenda de Google",
+          "items": [
+            {
+              "hash": "964f8b1",
+              "kind": "nuevo",
+              "text": "La conexión con Google Calendar ahora es de **ida y vuelta, y al instante**",
+              "details": [
+                "Mover una cita en el calendario de Google la reagenda en Kindoc, avisa al paciente por WhatsApp y ajusta los recordatorios",
+                "Borrar el evento en Google cancela la cita; si el nuevo horario choca con otra, el cambio se revierte y se le avisa al doctor",
+                "Se corrigió un desfase que podía correr la hora de las citas creadas desde el panel"
+              ],
+              "product": "Sistema"
+            },
+            {
+              "hash": "0c5e9bf",
+              "kind": "nuevo",
+              "text": "Cuando un médico bloquea un espacio en su calendario de Google, el panel lo muestra **al instante, sin recargar la página**",
+              "details": [
+                "También se pulió la ventana de nueva cita"
+              ],
+              "product": "Panel web"
+            }
+          ]
+        },
+        {
+          "emoji": "📈",
+          "title": "Monitoreo y estabilidad",
+          "items": [
+            {
+              "hash": "f7d1c0f",
+              "kind": "nuevo",
+              "text": "El **estado del asistente se ve de una sola mirada** en el Centro Admin: si está encendido, qué clínicas atiende y cómo está cada pieza",
+              "details": [],
+              "product": "Sistema"
+            }
+          ]
+        },
+        {
+          "emoji": "🔒",
+          "title": "Seguridad y accesos",
+          "items": [
+            {
+              "hash": "b7ab762",
+              "kind": "arreglo",
+              "text": "Solo el **administrador del sistema** puede decidir qué médicos entran al piloto",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "df3a226",
+              "kind": "nuevo",
+              "text": "El **rol de recepción** quedó listo: menú enfocado en lo esencial y alta de pacientes eligiendo al médico tratante",
+              "details": [],
+              "product": "Panel web"
+            }
+          ]
+        },
+        {
+          "emoji": "🩺",
+          "title": "Médicos y consultorios",
+          "items": [
+            {
+              "hash": "7fb4056",
+              "kind": "nuevo",
+              "text": "El piloto se enciende **médico por médico**: cada doctor se suma a la prueba cuando su información está lista",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "dcdc348",
+              "kind": "arreglo",
+              "text": "Un médico dado de alta desde el panel queda asignado a **su clínica**, y las fechas de nacimiento se guardan exactas",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "0ce8cc1",
+              "kind": "nuevo",
+              "text": "Desde la tabla de médicos del panel se **activa o se quita del piloto a cada doctor** con un clic",
+              "details": [],
+              "product": "Panel web"
+            },
+            {
+              "hash": "ba2fca7",
+              "kind": "nuevo",
+              "text": "Nueva pestaña **Piloto** en el panel para ver de un vistazo qué médicos participan de la prueba",
+              "details": [],
+              "product": "Panel web"
+            },
+            {
+              "hash": "563a998",
+              "kind": "nuevo",
+              "text": "El asistente de WhatsApp **solo ofrece y agenda citas con los médicos del piloto**",
+              "details": [],
+              "product": "Asistente de WhatsApp"
+            }
+          ]
+        }
+      ],
+      "changes": 13,
+      "internal": 1,
+      "products": [
+        "Sistema",
+        "Panel web",
+        "Asistente de WhatsApp"
+      ],
+      "dates": [
+        "2026-08-10",
+        "2026-08-11",
+        "2026-08-12",
+        "2026-08-14"
+      ],
+      "stat": {
+        "value": "3",
+        "text": "**La app está lista para probarse con los primeros 3 doctores.** El piloto se enciende médico por médico: el asistente solo agenda con quienes ya están dentro, y cada doctor nuevo se suma con un clic desde el panel."
+      },
+      "note": "En cuanto WhatsApp apruebe la plantilla del mensaje, los doctores del piloto también recibirán cada noche su agenda del día siguiente directo en su teléfono."
+    },
+    {
       "start": "2026-08-03",
       "end": "2026-08-09",
       "label": "3 – 9 de agosto, 2026",
@@ -117,10 +277,23 @@
               "product": "Panel web"
             }
           ]
+        },
+        {
+          "emoji": "🔔",
+          "title": "Recordatorios a pacientes",
+          "items": [
+            {
+              "hash": "907b169",
+              "kind": "arreglo",
+              "text": "Datos honestos en el inicio del asistente",
+              "details": [],
+              "product": "Panel web"
+            }
+          ]
         }
       ],
-      "changes": 12,
-      "internal": 3,
+      "changes": 13,
+      "internal": 4,
       "products": [
         "Sistema",
         "Panel web",
@@ -129,7 +302,9 @@
       ],
       "dates": [
         "2026-08-04",
-        "2026-08-06"
+        "2026-08-06",
+        "2026-08-07",
+        "2026-08-09"
       ],
       "stat": {
         "value": "63",
@@ -1312,8 +1487,8 @@
   ],
   "sinceNote": "La bitácora arranca el 24 de mayo de 2026. Antes de esa fecha el historial no tiene el detalle necesario para resumirlo con precisión, así que preferimos no inventarlo.",
   "totals": {
-    "weeks": 9,
-    "changes": 121,
+    "weeks": 10,
+    "changes": 135,
     "since": "2026-05-18",
     "sinceLabel": "24 de mayo, 2026"
   }
