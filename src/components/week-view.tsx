@@ -83,6 +83,17 @@ export function WeekView({
       </header>
 
       <div className="space-y-6 px-4 pt-8 pb-2 sm:px-8">
+        {week.mission && (
+          <div className="rounded-2xl bg-kd-lime px-6 py-7 text-center shadow-[0_2px_14px_rgba(47,52,57,0.07)] sm:px-8">
+            <p className="text-[11px] font-bold tracking-[0.18em] text-kd-ink/60 uppercase">
+              La misión de la semana
+            </p>
+            <p className="mt-2 text-xl leading-snug font-extrabold text-kd-ink sm:text-2xl">
+              <RichText>{week.mission}</RichText>
+            </p>
+          </div>
+        )}
+
         {week.sections.map((section, index) => (
           <section key={section.title} className="relative">
             <span className="absolute -top-2 left-1 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-kd-cyan-ink text-sm font-bold text-white shadow-md">

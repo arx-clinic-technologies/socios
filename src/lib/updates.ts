@@ -35,6 +35,8 @@ export interface Week {
   products: string[];
   /** Días de esa semana en que efectivamente se subió algo. */
   dates: string[];
+  /** Frase grande de la semana, arriba de las secciones (admite **negritas**). */
+  mission?: string;
   stat?: Stat;
   note?: string;
 }

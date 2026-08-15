@@ -502,6 +502,7 @@ function build() {
         // Días de la semana en que efectivamente se subió algo, del más viejo al
         // más reciente: sirve para decir "se publicó en 3 días distintos".
         dates: [...week.dates].sort(),
+        ...(weekOverride.mission ? { mission: weekOverride.mission } : {}),
         ...(weekOverride.stat ? { stat: weekOverride.stat } : {}),
         ...(weekOverride.note ? { note: weekOverride.note } : {}),
       };

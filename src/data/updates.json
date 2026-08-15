@@ -154,6 +154,7 @@
         "2026-08-12",
         "2026-08-14"
       ],
+      "mission": "**Probarlo todo en vivo**, con la operación real de la clínica — y cada falla que asome, resolverla en el momento.",
       "stat": {
         "value": "3",
         "text": "**La app está lista para probarse con los primeros 3 doctores.** El piloto se enciende médico por médico: el asistente solo agenda con quienes ya están dentro, y cada doctor nuevo se suma con un clic desde el panel."
