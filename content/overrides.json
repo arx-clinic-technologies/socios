@@ -5,6 +5,15 @@
   "sinceNote": "La bitácora arranca el 24 de mayo de 2026. Antes de esa fecha el historial no tiene el detalle necesario para resumirlo con precisión, así que preferimos no inventarlo.",
 
   "weeks": {
+    "2026-08-17": {
+      "title": "Los consultorios, en vivo en el panel",
+      "mission": "**Ver la clínica sala por sala**: qué consultorio está libre, quién está en cada uno y cuánta carga tiene cada espacio del día.",
+      "stat": {
+        "value": "10",
+        "text": "**Meta autorizó las 10 plantillas de mensajes de WhatsApp.** Son los mensajes con los que la clínica inicia la conversación — como los recordatorios de cita y la agenda diaria de los doctores — y ya están aprobados y listos para usarse."
+      },
+      "note": "El nuevo módulo de Consultorios es el mapa vivo de la clínica: cada sala aparece como una tarjeta con su color y emoji, indicando si está libre u ocupada, con qué cita y con qué doctor. El sistema asigna sala a cada cita automáticamente, y recepción y asistentes pueden reasignarla desde el tablero cuando hace falta; crear o configurar las salas queda reservado a los administradores."
+    },
     "2026-08-10": {
       "title": "La aplicación quedó lista para el piloto",
       "mission": "**Probarlo todo en vivo**, con la operación real de la clínica — y cada falla que asome, resolverla en el momento.",
@@ -33,6 +42,116 @@
   },
 
   "commits": {
+    "81da5b1": {
+      "area": "medicos",
+      "text": "Nuevo **tablero de consultorios**: cada sala muestra si está libre u ocupada, con qué cita y con qué doctor",
+      "details": [
+        "El sistema asigna la sala automáticamente y recepción puede reasignarla desde el tablero",
+        "Una leyenda de colores resume qué tan cargado está cada consultorio en el día"
+      ]
+    },
+    "d041cee": {
+      "area": "medicos",
+      "text": "Los **asistentes ya usan los consultorios**: ven el tablero y reasignan salas, sin poder crearlas ni borrarlas"
+    },
+    "e85f072": {
+      "area": "medicos",
+      "text": "Las tarjetas de la agenda muestran **en qué consultorio** es cada cita, y el detalle indica quién asignó la sala"
+    },
+    "9ab304b": {
+      "area": "medicos",
+      "text": "Desde el detalle de un consultorio se puede **crear una cita directo en esa sala**, con la sede ya elegida"
+    },
+    "1f9594a": {
+      "area": "medicos",
+      "text": "Cada consultorio tiene su **emoji y su color de la marca Kindoc** para reconocerlo de un vistazo"
+    },
+    "0a2f3c5": {
+      "area": "medicos",
+      "text": "Rediseñamos las tarjetas del tablero de consultorios para que se lean **más limpias y de un golpe de vista**"
+    },
+    "ba35f65": {
+      "area": "medicos",
+      "kind": "arreglo",
+      "text": "El acceso a Consultorios quedó a la vista en la agenda, y el detalle de cita muestra la **sala asignada**"
+    },
+    "eff3ab7": { "hide": true },
+
+    "7e98e21": {
+      "area": "whatsapp",
+      "text": "El sistema lleva un **registro central de las plantillas de WhatsApp** de cada clínica, sincronizado con Meta",
+      "details": [
+        "Meta ya autorizó las 10 plantillas de mensajes de la clínica"
+      ]
+    },
+    "c574067": {
+      "area": "whatsapp",
+      "text": "Nueva sección en el Centro Admin para **ver las plantillas de WhatsApp**: cuáles hay y en qué estado de aprobación está cada una"
+    },
+    "2c13c2d": { "hide": true },
+    "3dda555": { "hide": true },
+    "2e700ad": { "hide": true },
+    "67a0996": {
+      "area": "whatsapp",
+      "kind": "arreglo",
+      "text": "Si un mensaje falla al enviarse, **el resto de los envíos continúa** sin interrumpirse"
+    },
+    "8c648c3": {
+      "area": "whatsapp",
+      "kind": "arreglo",
+      "text": "El paciente ya no ve **códigos internos** en algunas respuestas del asistente"
+    },
+    "76af4a4": {
+      "area": "whatsapp",
+      "text": "La lista de chats del panel muestra solo **conversaciones de pacientes**"
+    },
+
+    "789a893": {
+      "area": "medicos",
+      "kind": "arreglo",
+      "text": "El alta de médicos guarda **todos los datos sin pérdidas**, y dar de baja a un médico le **retira el acceso** al panel"
+    },
+    "af90078": {
+      "area": "medicos",
+      "kind": "arreglo",
+      "text": "La pantalla de médicos quedó **operable de punta a punta**: editar vuelve a funcionar y el alta usa un solo formulario"
+    },
+    "746b743": {
+      "area": "medicos",
+      "kind": "arreglo",
+      "text": "Los campos del formulario de médicos ya no **pierden el foco** al escribir"
+    },
+    "5f84205": {
+      "area": "pacientes",
+      "kind": "arreglo",
+      "text": "Los avisos al capturar pacientes salen **en español**, y las recetas se ven para todo el personal que debe verlas"
+    },
+    "b8d04a3": {
+      "area": "pacientes",
+      "kind": "arreglo",
+      "text": "La ficha del paciente ya no pierde **campos clínicos** al guardar y las fechas se muestran exactas"
+    },
+    "92d7c0f": {
+      "area": "organizacion",
+      "text": "Los administradores de la organización ya ven la sección de **Sucursales** en el menú"
+    },
+    "a5b6c2b": {
+      "area": "citas",
+      "text": "La agenda abre directo en la vista **por doctores**, la que más usa recepción"
+    },
+
+    "494608f": {
+      "area": "whatsapp",
+      "kind": "arreglo",
+      "text": "Los doctores del piloto ya reciben su **agenda completa por WhatsApp**; el asistente también entiende «ver mis citas»"
+    },
+    "200ad89": { "hide": true },
+    "8f6bdaa": {
+      "area": "recordatorios",
+      "kind": "arreglo",
+      "text": "Afinamos el asistente antes del arranque: bloqueos de agenda con la **hora correcta**, avisos cuando algo falla y recordatorios más robustos"
+    },
+
     "7fb4056": {
       "area": "medicos",
       "text": "El piloto se enciende **médico por médico**: cada doctor se suma a la prueba cuando su información está lista"

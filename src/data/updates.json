@@ -1,6 +1,223 @@
 {
   "weeks": [
     {
+      "start": "2026-08-17",
+      "end": "2026-08-23",
+      "label": "17 – 23 de agosto, 2026",
+      "title": "Los consultorios, en vivo en el panel",
+      "sections": [
+        {
+          "emoji": "🩺",
+          "title": "Médicos y consultorios",
+          "items": [
+            {
+              "hash": "1f9594a",
+              "kind": "nuevo",
+              "text": "Cada consultorio tiene su **emoji y su color de la marca Kindoc** para reconocerlo de un vistazo",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "789a893",
+              "kind": "arreglo",
+              "text": "El alta de médicos guarda **todos los datos sin pérdidas**, y dar de baja a un médico le **retira el acceso** al panel",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "9ab304b",
+              "kind": "nuevo",
+              "text": "Desde el detalle de un consultorio se puede **crear una cita directo en esa sala**, con la sede ya elegida",
+              "details": [],
+              "product": "Panel web"
+            },
+            {
+              "hash": "0a2f3c5",
+              "kind": "nuevo",
+              "text": "Rediseñamos las tarjetas del tablero de consultorios para que se lean **más limpias y de un golpe de vista**",
+              "details": [],
+              "product": "Panel web"
+            },
+            {
+              "hash": "ba35f65",
+              "kind": "arreglo",
+              "text": "El acceso a Consultorios quedó a la vista en la agenda, y el detalle de cita muestra la **sala asignada**",
+              "details": [],
+              "product": "Panel web"
+            },
+            {
+              "hash": "81da5b1",
+              "kind": "nuevo",
+              "text": "Nuevo **tablero de consultorios**: cada sala muestra si está libre u ocupada, con qué cita y con qué doctor",
+              "details": [
+                "El sistema asigna la sala automáticamente y recepción puede reasignarla desde el tablero",
+                "Una leyenda de colores resume qué tan cargado está cada consultorio en el día"
+              ],
+              "product": "Panel web"
+            },
+            {
+              "hash": "e85f072",
+              "kind": "nuevo",
+              "text": "Las tarjetas de la agenda muestran **en qué consultorio** es cada cita, y el detalle indica quién asignó la sala",
+              "details": [],
+              "product": "Panel web"
+            },
+            {
+              "hash": "d041cee",
+              "kind": "nuevo",
+              "text": "Los **asistentes ya usan los consultorios**: ven el tablero y reasignan salas, sin poder crearlas ni borrarlas",
+              "details": [],
+              "product": "Panel web"
+            },
+            {
+              "hash": "746b743",
+              "kind": "arreglo",
+              "text": "Los campos del formulario de médicos ya no **pierden el foco** al escribir",
+              "details": [],
+              "product": "Panel web"
+            },
+            {
+              "hash": "af90078",
+              "kind": "arreglo",
+              "text": "La pantalla de médicos quedó **operable de punta a punta**: editar vuelve a funcionar y el alta usa un solo formulario",
+              "details": [],
+              "product": "Panel web"
+            }
+          ]
+        },
+        {
+          "emoji": "💬",
+          "title": "WhatsApp y el asistente",
+          "items": [
+            {
+              "hash": "67a0996",
+              "kind": "arreglo",
+              "text": "Si un mensaje falla al enviarse, **el resto de los envíos continúa** sin interrumpirse",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "7e98e21",
+              "kind": "nuevo",
+              "text": "El sistema lleva un **registro central de las plantillas de WhatsApp** de cada clínica, sincronizado con Meta",
+              "details": [
+                "Meta ya autorizó las 10 plantillas de mensajes de la clínica"
+              ],
+              "product": "Sistema"
+            },
+            {
+              "hash": "8c648c3",
+              "kind": "arreglo",
+              "text": "El paciente ya no ve **códigos internos** en algunas respuestas del asistente",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "76af4a4",
+              "kind": "nuevo",
+              "text": "La lista de chats del panel muestra solo **conversaciones de pacientes**",
+              "details": [],
+              "product": "Panel web"
+            },
+            {
+              "hash": "c574067",
+              "kind": "nuevo",
+              "text": "Nueva sección en el Centro Admin para **ver las plantillas de WhatsApp**: cuáles hay y en qué estado de aprobación está cada una",
+              "details": [],
+              "product": "Panel web"
+            },
+            {
+              "hash": "494608f",
+              "kind": "arreglo",
+              "text": "Los doctores del piloto ya reciben su **agenda completa por WhatsApp**; el asistente también entiende «ver mis citas»",
+              "details": [],
+              "product": "Asistente de WhatsApp"
+            }
+          ]
+        },
+        {
+          "emoji": "🧸",
+          "title": "Pacientes",
+          "items": [
+            {
+              "hash": "5f84205",
+              "kind": "arreglo",
+              "text": "Los avisos al capturar pacientes salen **en español**, y las recetas se ven para todo el personal que debe verlas",
+              "details": [],
+              "product": "Sistema"
+            },
+            {
+              "hash": "b8d04a3",
+              "kind": "arreglo",
+              "text": "La ficha del paciente ya no pierde **campos clínicos** al guardar y las fechas se muestran exactas",
+              "details": [],
+              "product": "Panel web"
+            }
+          ]
+        },
+        {
+          "emoji": "🗓️",
+          "title": "Citas y agenda",
+          "items": [
+            {
+              "hash": "a5b6c2b",
+              "kind": "nuevo",
+              "text": "La agenda abre directo en la vista **por doctores**, la que más usa recepción",
+              "details": [],
+              "product": "Panel web"
+            }
+          ]
+        },
+        {
+          "emoji": "🏥",
+          "title": "Organización y equipo",
+          "items": [
+            {
+              "hash": "92d7c0f",
+              "kind": "nuevo",
+              "text": "Los administradores de la organización ya ven la sección de **Sucursales** en el menú",
+              "details": [],
+              "product": "Panel web"
+            }
+          ]
+        },
+        {
+          "emoji": "🔔",
+          "title": "Recordatorios a pacientes",
+          "items": [
+            {
+              "hash": "8f6bdaa",
+              "kind": "arreglo",
+              "text": "Afinamos el asistente antes del arranque: bloqueos de agenda con la **hora correcta**, avisos cuando algo falla y recordatorios más robustos",
+              "details": [],
+              "product": "Asistente de WhatsApp"
+            }
+          ]
+        }
+      ],
+      "changes": 21,
+      "internal": 3,
+      "products": [
+        "Sistema",
+        "Panel web",
+        "Asistente de WhatsApp"
+      ],
+      "dates": [
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-22",
+        "2026-08-23"
+      ],
+      "mission": "**Ver la clínica sala por sala**: qué consultorio está libre, quién está en cada uno y cuánta carga tiene cada espacio del día.",
+      "stat": {
+        "value": "10",
+        "text": "**Meta autorizó las 10 plantillas de mensajes de WhatsApp.** Son los mensajes con los que la clínica inicia la conversación — como los recordatorios de cita y la agenda diaria de los doctores — y ya están aprobados y listos para usarse."
+      },
+      "note": "El nuevo módulo de Consultorios es el mapa vivo de la clínica: cada sala aparece como una tarjeta con su color y emoji, indicando si está libre u ocupada, con qué cita y con qué doctor. El sistema asigna sala a cada cita automáticamente, y recepción y asistentes pueden reasignarla desde el tablero cuando hace falta; crear o configurar las salas queda reservado a los administradores."
+    },
+    {
       "start": "2026-08-10",
       "end": "2026-08-16",
       "label": "10 – 16 de agosto, 2026",
@@ -96,6 +313,13 @@
               "text": "El **rol de recepción** quedó listo: menú enfocado en lo esencial y alta de pacientes eligiendo al médico tratante",
               "details": [],
               "product": "Panel web"
+            },
+            {
+              "hash": "07539de",
+              "kind": "arreglo",
+              "text": "Subir eve 0.11.4 → 0.38.3 (Vercel exige ≥0.18)",
+              "details": [],
+              "product": "Asistente de WhatsApp"
             }
           ]
         },
@@ -141,7 +365,7 @@
           ]
         }
       ],
-      "changes": 13,
+      "changes": 14,
       "internal": 1,
       "products": [
         "Sistema",
@@ -1488,8 +1712,8 @@
   ],
   "sinceNote": "La bitácora arranca el 24 de mayo de 2026. Antes de esa fecha el historial no tiene el detalle necesario para resumirlo con precisión, así que preferimos no inventarlo.",
   "totals": {
-    "weeks": 10,
-    "changes": 135,
+    "weeks": 11,
+    "changes": 157,
     "since": "2026-05-18",
     "sinceLabel": "24 de mayo, 2026"
   }
