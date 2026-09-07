@@ -5,6 +5,24 @@
   "sinceNote": "La bitácora arranca el 24 de mayo de 2026. Antes de esa fecha el historial no tiene el detalle necesario para resumirlo con precisión, así que preferimos no inventarlo.",
 
   "weeks": {
+    "2026-08-31": {
+      "title": "Kindoc a la medida: agenda más flexible y un asistente más atento",
+      "mission": "**Que agendar por WhatsApp se sienta como hablar con la clínica**: el asistente reconoce al paciente, sabe si es su primera vez, le ofrece a su doctor de siempre y le dice cómo llegar.",
+      "stat": {
+        "value": "1",
+        "text": "**Una sola clínica: Kindoc.** La plataforma dejó de ser un sistema genérico para muchas clínicas y quedó hecha a la medida de Kindoc: menos pantallas, menos preguntas y cuatro roles claros — administrador de sistema, administrador de Kindoc, asistente y médico."
+      },
+      "note": "Tres pedidos que salieron de la conversación con Kindoc del 4 de septiembre ya están en el sistema: la duración de cada cita se puede ajustar, cada cita admite notas operativas y a cada médico se le puede fijar un horario especial temporal. Las «sucursales» ahora se llaman **clínicas** en todo el panel."
+    },
+    "2026-08-24": {
+      "title": "El chat del equipo, más claro y con corrector",
+      "mission": "**Que el equipo escriba tranquilo**: cada mensaje manual sale sin errores de ortografía, y cuando un mensaje no llega el panel explica el motivo en español claro.",
+      "stat": {
+        "value": "4 min",
+        "text": "**Ningún paciente se queda sin respuesta.** Si el asistente de WhatsApp deja de contestar por cualquier motivo, a los cuatro minutos un vigilante automático lo detecta, pasa la conversación al equipo y le avisa al paciente que enseguida lo atienden."
+      },
+      "note": "Las credenciales de los médicos se rediseñaron a pedido de los propios doctores de Kindoc: todos son médicos generales y encima suman especialidades, subespecialidades y altas especialidades. Salió con un catálogo borrador; queda pendiente que Kindoc nos comparta la lista definitiva para cargarla."
+    },
     "2026-08-17": {
       "title": "Los consultorios, en vivo en el panel",
       "mission": "**Ver la clínica sala por sala**: qué consultorio está libre, quién está en cada uno y cuánta carga tiene cada espacio del día.",
@@ -42,6 +60,253 @@
   },
 
   "commits": {
+    "4a72aa3": {
+      "area": "citas",
+      "text": "Tres pedidos de Kindoc en la agenda: **duración editable** de cada cita, **notas operativas** por cita y **horario especial temporal** por médico",
+      "details": [
+        "El horario especial acota las horas de atención durante un rango de fechas («la próxima semana solo después de las 18:00») y al vencer vuelve solo el horario habitual",
+        "Las notas viajan al correo diario y a la agenda por WhatsApp del doctor",
+        "Al alargar una cita, el sistema avisa con qué otra cita chocaría"
+      ]
+    },
+    "a7b2d73": {
+      "area": "citas",
+      "text": "En el panel, la duración se cambia desde la cita, las notas se capturan en el detalle y el horario especial se configura en la ficha del médico"
+    },
+    "cc3fd98": {
+      "area": "citas",
+      "text": "El asistente de WhatsApp **respeta el horario especial** del médico y lo avisa antes de ofrecer horas"
+    },
+    "4f347d7": { "hide": true },
+    "d8b550d": {
+      "area": "citas",
+      "text": "El sistema distingue **primera consulta** de **subsecuente** por médico y por paciente, y sugiere el servicio correcto con su precio y duración"
+    },
+    "72904e4": {
+      "area": "citas",
+      "text": "En el panel, cada servicio del médico indica su tipo de consulta, y al crear una cita se **preselecciona** primera vez o subsecuente según si el paciente ya se atendió con ese doctor"
+    },
+    "e049062": {
+      "area": "citas",
+      "text": "El asistente de WhatsApp agenda **primera consulta o subsecuente** con el servicio correcto e informa el costo que corresponde"
+    },
+    "d74e876": {
+      "area": "citas",
+      "text": "Al pedir cita, el asistente **ofrece primero al doctor con el que el paciente ya se atendió** («veo que ya se atendió con la Dra. X, ¿agendamos con ella?»)",
+      "details": [
+        "Solo lo afirma cuando consta en el historial, y nunca menciona el motivo de la consulta"
+      ]
+    },
+    "36bc677": {
+      "area": "citas",
+      "kind": "arreglo",
+      "text": "Cuando la clínica reagenda una cita, el paciente **vuelve a recibir el aviso por WhatsApp**; una falla lo dejaba sin mensaje",
+      "details": [
+        "Afectaba también a las citas que el doctor movía desde su Google Calendar"
+      ]
+    },
+    "e74439c": {
+      "area": "citas",
+      "kind": "arreglo",
+      "text": "Los horarios disponibles respetan la **duración real** de cada cita: una consulta de una hora ya no deja «libre» la media hora que ocupa"
+    },
+    "52e281d": {
+      "area": "citas",
+      "kind": "arreglo",
+      "text": "Los pacientes vuelven a poder **ver, confirmar, cancelar o reagendar** sus citas desde WhatsApp; y el asistente ya no agenda sin ficha ni encima de otra cita"
+    },
+    "bd46903": { "hide": true },
+    "0f63f03": { "hide": true },
+    "18edccf": {
+      "area": "citas",
+      "text": "Cuando el asistente de WhatsApp agenda una cita, las asistentes ven **una ventana al momento** con los datos y un botón para abrir esa conversación",
+      "details": [
+        "También llega a la campana de notificaciones del panel"
+      ]
+    },
+    "f634cd0": {
+      "area": "whatsapp",
+      "text": "Cada clínica tiene sus **indicaciones de cómo llegar** (piso, lobby, número de consultorio), y el paciente las recibe al confirmar la cita y en los recordatorios"
+    },
+    "2e28a38": {
+      "area": "whatsapp",
+      "text": "El asistente de WhatsApp incluye el «🧭 Cómo llegar» de la sede al confirmar la cita, y menciona **la sede correcta** en el mensaje final",
+      "details": [
+        "Los recordatorios saludan al tutor cuando el paciente es un menor",
+        "Cuando alguien del equipo atiende y luego devuelve el control, el asistente ya sabe qué se habló mientras tanto"
+      ]
+    },
+    "c2b43f9": {
+      "area": "whatsapp",
+      "text": "El asistente **se entera de las plantillas** que la clínica manda (recordatorio, encuesta, aviso de cambio) y así entiende la respuesta del paciente; la calificación de la encuesta ya no se pierde"
+    },
+    "1b8136b": {
+      "area": "recordatorios",
+      "text": "Si un paciente **deja la cita a medias** (pidió horarios y no contestó), a los 30 minutos el asistente le manda un recordatorio con los botones «Continuar» y «En otro momento»",
+      "details": [
+        "Un solo recordatorio por paciente y día, nunca de noche (21:00 a 08:00), y solo si nadie del equipo está atendiendo",
+        "Arranca apagado; se enciende con un interruptor cuando se pruebe en vivo"
+      ]
+    },
+    "6cf8bfd": { "hide": true },
+    "d138122": {
+      "area": "recordatorios",
+      "kind": "arreglo",
+      "text": "El recordatorio de cita a medias **no se envía si el paciente ya respondió**, y el asistente le habla de usted"
+    },
+    "ead7714": {
+      "area": "organizacion",
+      "text": "La plataforma **opera solo para Kindoc**: se retiró todo lo de «varias clínicas», y las «sucursales» ahora se llaman **clínicas**",
+      "details": [
+        "Cuatro roles claros: administrador de sistema (ARX), administrador de Kindoc, asistente y médico"
+      ]
+    },
+    "e1eb1dc": {
+      "area": "organizacion",
+      "text": "El panel **ya no pide elegir organización** al entrar"
+    },
+    "8f8c315": { "hide": true },
+    "cb36e9f": { "hide": true },
+    "716666d": { "hide": true },
+    "4e32401": { "hide": true },
+    "f91af05": { "hide": true },
+    "16905eb": { "hide": true },
+    "441085b": { "hide": true },
+    "e8e5275": {
+      "area": "organizacion",
+      "kind": "arreglo",
+      "text": "Corregimos restos del paso a una sola clínica que dejaban **pacientes y registros fuera de las listas**"
+    },
+    "dcaf242": {
+      "area": "organizacion",
+      "kind": "arreglo",
+      "text": "Volvió a ser posible **crear asistentes** desde el panel"
+    },
+    "0c4fd3a": {
+      "area": "medicos",
+      "kind": "arreglo",
+      "text": "Las asistentes vuelven a poder **editar la ficha de un médico**; la página fallaba al abrir"
+    },
+    "3df23e2": {
+      "area": "medicos",
+      "kind": "arreglo",
+      "text": "La ficha del médico **carga sus clínicas** aunque el registro viniera incompleto"
+    },
+    "4ec1faa": {
+      "area": "organizacion",
+      "kind": "arreglo",
+      "text": "La página de **Clínicas** volvió a mostrar la lista; se había quedado en blanco"
+    },
+
+    "2269891": {
+      "area": "whatsapp",
+      "text": "En el chat, un botón junto a la caja de texto **manda las indicaciones de la clínica con un clic**; antes las asistentes las copiaban a mano",
+      "details": [
+        "Se capturan en Centro de Administración → Clínicas"
+      ]
+    },
+    "1233e8a": {
+      "area": "whatsapp",
+      "text": "Los mensajes que el equipo escribe a mano pasan por un **corrector de ortografía con inteligencia artificial** antes de salir",
+      "details": [
+        "Corrige acentos y errores de dedo sin cambiar el sentido ni el tono del mensaje",
+        "Se puede apagar en un instante si hiciera falta"
+      ]
+    },
+    "cf6b547": {
+      "area": "whatsapp",
+      "text": "En el chat aparece un **aviso discreto** cuando un mensaje se corrigió antes de enviarse"
+    },
+    "d54a6e5": {
+      "area": "whatsapp",
+      "kind": "mejora",
+      "text": "El corrector responde **en menos de un segundo**; al principio tardaba hasta siete"
+    },
+    "83002ac": {
+      "area": "whatsapp",
+      "kind": "arreglo",
+      "text": "Cuando alguien del equipo toma una conversación, el asistente **se hace a un lado en todo el hilo**; y si el corrector tarda, ya no frena el envío"
+    },
+    "551bef3": {
+      "area": "whatsapp",
+      "text": "En el chat, los mensajes de la **asistente** y los del **doctor** se distinguen con su propia etiqueta y color"
+    },
+    "9c24858": { "hide": true },
+    "905e95e": {
+      "area": "whatsapp",
+      "text": "Si un mensaje de WhatsApp no se entrega, el panel explica **el motivo en español claro**: por ejemplo, que pasaron más de 24 horas sin respuesta del paciente y cómo reabrir la conversación"
+    },
+    "4e8b235": { "hide": true },
+    "9f5849a": {
+      "area": "whatsapp",
+      "text": "Un **vigilante automático** detecta si el asistente de WhatsApp se quedó callado con un paciente: pasa la conversación al equipo y le avisa al paciente que enseguida lo atienden",
+      "details": [
+        "Revisa cada dos minutos y actúa a los cuatro minutos sin respuesta"
+      ]
+    },
+    "85267a7": {
+      "area": "monitoreo",
+      "text": "Toda la inteligencia artificial del sistema pasa por una **puerta única** que nos deja ver su uso y su costo, y cambiar de proveedor sin tocar nada más"
+    },
+    "ce7ee75": { "hide": true },
+    "32ec2ad": {
+      "area": "medicos",
+      "text": "Cada médico puede tener **varias especialidades, subespecialidades y altas especialidades**, con su cédula profesional por nivel",
+      "details": [
+        "Pedido por los propios médicos de Kindoc: todos son médicos generales y encima suman formación",
+        "Si una formación no está en el catálogo, se captura como «Otra»"
+      ]
+    },
+    "a26edcf": {
+      "area": "medicos",
+      "text": "Nuevo **editor de credenciales** en la ficha del médico para capturar esos niveles y sus cédulas",
+      "details": [
+        "Se rediseñó a los pocos días para que sea más claro y rápido de llenar"
+      ]
+    },
+    "1c1ef47": { "hide": true },
+    "4be86f7": {
+      "area": "medicos",
+      "text": "El asistente de WhatsApp **encuentra doctores por subespecialidad o alta especialidad**, por ejemplo un electrofisiólogo cardíaco"
+    },
+    "934f371": {
+      "area": "medicos",
+      "text": "Dar de alta a un médico usa **el mismo formulario** que editarlo, y captura desde el inicio biografía, experiencia, tarifa, idiomas y formación"
+    },
+    "14f979e": {
+      "area": "medicos",
+      "kind": "arreglo",
+      "text": "Las asistentes y el propio médico ya pueden **guardar la ficha del doctor**"
+    },
+    "49f8b32": {
+      "area": "organizacion",
+      "kind": "arreglo",
+      "text": "Editar a un usuario del equipo ya no crea **fichas de médico por error**"
+    },
+    "07356c2": { "hide": true },
+    "d8bec29": { "hide": true },
+    "8d65393": {
+      "area": "agenda-google",
+      "text": "Las citas que agenda el asistente de WhatsApp aparecen en **Google Calendar al instante**; si se reagendan o cancelan, el evento se mueve o se borra",
+      "details": [
+        "Una revisión periódica repara cualquier evento que se haya quedado fuera"
+      ]
+    },
+    "fa603ad": { "hide": true },
+    "cdd2d7b": {
+      "area": "reportes",
+      "kind": "arreglo",
+      "text": "Los indicadores del inicio y las **citas de hoy** usan la hora de México: las citas de la tarde-noche ya no se contaban en el día siguiente"
+    },
+    "34d35b2": {
+      "area": "producto",
+      "text": "Nueva página de **Servicios** en el panel, con el resumen y el ranking de los servicios más usados"
+    },
+    "66182b7": {
+      "area": "producto",
+      "text": "Las secciones de **consultas, niño sano y facturación** quedan ocultas hasta su lanzamiento, para que el piloto se concentre en agenda, pacientes y WhatsApp"
+    },
+
     "81da5b1": {
       "area": "medicos",
       "text": "Nuevo **tablero de consultorios**: cada sala muestra si está libre u ocupada, con qué cita y con qué doctor",
