@@ -34,13 +34,10 @@
               "product": "Panel web"
             },
             {
-              "hash": "2e28a38",
+              "hash": "1b8136b",
               "kind": "nuevo",
-              "text": "El asistente de WhatsApp incluye el «🧭 Cómo llegar» de la sede al confirmar la cita, y menciona **la sede correcta** en el mensaje final",
-              "details": [
-                "Los recordatorios saludan al tutor cuando el paciente es un menor",
-                "Cuando alguien del equipo atiende y luego devuelve el control, el asistente ya sabe qué se habló mientras tanto"
-              ],
+              "text": "Cuando una asistente atiende una conversación y luego **devuelve el control**, el asistente de WhatsApp ya sabe todo lo que ella escribió y lo que respondió el paciente, y retoma sin repetir preguntas",
+              "details": [],
               "product": "Asistente de WhatsApp"
             }
           ]
@@ -107,6 +104,16 @@
               "product": "Panel web"
             },
             {
+              "hash": "2e28a38",
+              "kind": "arreglo",
+              "text": "El asistente **ya no pierde la clínica elegida** entre que agenda la cita y manda el mensaje de confirmación; antes podía confirmar con otra sede",
+              "details": [
+                "Al confirmar incluye el «🧭 Cómo llegar» de esa clínica",
+                "Los recordatorios saludan al tutor cuando el paciente es un menor"
+              ],
+              "product": "Asistente de WhatsApp"
+            },
+            {
               "hash": "52e281d",
               "kind": "arreglo",
               "text": "Los pacientes vuelven a poder **ver, confirmar, cancelar o reagendar** sus citas desde WhatsApp; y el asistente ya no agenda sin ficha ni encima de otra cita",
@@ -134,6 +141,29 @@
               "details": [
                 "Solo lo afirma cuando consta en el historial, y nunca menciona el motivo de la consulta"
               ],
+              "product": "Asistente de WhatsApp"
+            }
+          ]
+        },
+        {
+          "emoji": "🔔",
+          "title": "Recordatorios a pacientes",
+          "items": [
+            {
+              "hash": "6cf8bfd",
+              "kind": "nuevo",
+              "text": "Si un paciente **deja la cita a medias** (pidió horarios y no contestó), a los 30 minutos el asistente le manda un recordatorio con los botones «Continuar» y «En otro momento»",
+              "details": [
+                "Un solo recordatorio por paciente y día, nunca de noche (21:00 a 08:00), y solo si nadie del equipo está atendiendo",
+                "Arranca apagado; se enciende con un interruptor cuando se pruebe en vivo"
+              ],
+              "product": "Sistema"
+            },
+            {
+              "hash": "d138122",
+              "kind": "arreglo",
+              "text": "El recordatorio de cita a medias **no se envía si el paciente ya respondió**, y el asistente le habla de usted",
+              "details": [],
               "product": "Asistente de WhatsApp"
             }
           ]
@@ -200,32 +230,9 @@
               "product": "Panel web"
             }
           ]
-        },
-        {
-          "emoji": "🔔",
-          "title": "Recordatorios a pacientes",
-          "items": [
-            {
-              "hash": "d138122",
-              "kind": "arreglo",
-              "text": "El recordatorio de cita a medias **no se envía si el paciente ya respondió**, y el asistente le habla de usted",
-              "details": [],
-              "product": "Asistente de WhatsApp"
-            },
-            {
-              "hash": "1b8136b",
-              "kind": "nuevo",
-              "text": "Si un paciente **deja la cita a medias** (pidió horarios y no contestó), a los 30 minutos el asistente le manda un recordatorio con los botones «Continuar» y «En otro momento»",
-              "details": [
-                "Un solo recordatorio por paciente y día, nunca de noche (21:00 a 08:00), y solo si nadie del equipo está atendiendo",
-                "Arranca apagado; se enciende con un interruptor cuando se pruebe en vivo"
-              ],
-              "product": "Asistente de WhatsApp"
-            }
-          ]
         }
       ],
-      "changes": 24,
+      "changes": 25,
       "internal": 0,
       "products": [
         "Sistema",
@@ -2165,7 +2172,7 @@
   "sinceNote": "La bitácora arranca el 24 de mayo de 2026. Antes de esa fecha el historial no tiene el detalle necesario para resumirlo con precisión, así que preferimos no inventarlo.",
   "totals": {
     "weeks": 13,
-    "changes": 199,
+    "changes": 200,
     "since": "2026-05-18",
     "sinceLabel": "24 de mayo, 2026"
   }

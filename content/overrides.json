@@ -129,11 +129,12 @@
       "text": "Cada clínica tiene sus **indicaciones de cómo llegar** (piso, lobby, número de consultorio), y el paciente las recibe al confirmar la cita y en los recordatorios"
     },
     "2e28a38": {
-      "area": "whatsapp",
-      "text": "El asistente de WhatsApp incluye el «🧭 Cómo llegar» de la sede al confirmar la cita, y menciona **la sede correcta** en el mensaje final",
+      "area": "citas",
+      "kind": "arreglo",
+      "text": "El asistente **ya no pierde la clínica elegida** entre que agenda la cita y manda el mensaje de confirmación; antes podía confirmar con otra sede",
       "details": [
-        "Los recordatorios saludan al tutor cuando el paciente es un menor",
-        "Cuando alguien del equipo atiende y luego devuelve el control, el asistente ya sabe qué se habló mientras tanto"
+        "Al confirmar incluye el «🧭 Cómo llegar» de esa clínica",
+        "Los recordatorios saludan al tutor cuando el paciente es un menor"
       ]
     },
     "c2b43f9": {
@@ -141,6 +142,10 @@
       "text": "El asistente **se entera de las plantillas** que la clínica manda (recordatorio, encuesta, aviso de cambio) y así entiende la respuesta del paciente; la calificación de la encuesta ya no se pierde"
     },
     "1b8136b": {
+      "area": "whatsapp",
+      "text": "Cuando una asistente atiende una conversación y luego **devuelve el control**, el asistente de WhatsApp ya sabe todo lo que ella escribió y lo que respondió el paciente, y retoma sin repetir preguntas"
+    },
+    "6cf8bfd": {
       "area": "recordatorios",
       "text": "Si un paciente **deja la cita a medias** (pidió horarios y no contestó), a los 30 minutos el asistente le manda un recordatorio con los botones «Continuar» y «En otro momento»",
       "details": [
@@ -148,7 +153,6 @@
         "Arranca apagado; se enciende con un interruptor cuando se pruebe en vivo"
       ]
     },
-    "6cf8bfd": { "hide": true },
     "d138122": {
       "area": "recordatorios",
       "kind": "arreglo",
